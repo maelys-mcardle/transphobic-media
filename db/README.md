@@ -27,8 +27,13 @@ even if the production itself is affirming of trans rights.
 ### normalizesTransphobia
 
 Whether it normalizes transphobia. This includes media containing transphobic 
-jokes, productions that cast cis men to play trans women, etc. This is
-subjective.
+jokes and productions that cast cis men to play trans women.
+
+This does not include portraying trans women as sex workers. While trans
+women characters are disproportionately sex workers in works of fiction,
+sex work is as a legitimate field of work as any. Therefore, including it here
+would be stigmatizing of trans people who do sex work, and so, it is not
+cause to consider whether a title normalizes transphobia.
 
 ```
 0: Does not contribute to the marginalization of trans people
