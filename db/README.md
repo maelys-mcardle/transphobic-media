@@ -7,7 +7,22 @@ data stored in the `transphobic.tsv` file.
 
 ### imdb
 
-The IMDB identifier for the movie or show.
+The IMDB identifier for the movie or show. If the url for the production is
+`www.imdb.com/title/tt0109445/`, then the identifier would be `tt0109445`.
+
+### transphobia
+
+Whether the media is transphobic or contains depictions of transphobia 
+even if the production itself is affirming of trans rights.
+
+```
+0: No transphobia in the content
+1: Transphobic or depicts transphobia
+-: N/A
+?: Unknown
+```
+
+**Note**: If `normalizesTransphobia` is `1`, so is this.
 
 ### normalizesTransphobia
 
@@ -35,9 +50,11 @@ Whether a trans role is played, in its entirety, by a cis actor.
 ?: Unknown
 ```
 
-## deadTrans
+### deadTrans
 
-Whether a trans character dies.
+Whether a trans character dies, for any reason other than old age. See the
+[bury your gays](http://tvtropes.org/pmwiki/pmwiki.php/Main/BuryYourGays) 
+trope.
 
 ```
 0: No trans characters die
@@ -46,21 +63,7 @@ Whether a trans character dies.
 ?: Unknown
 ```
 
-### showsTransphobia
-
-Whether the media contains depictions of transphobia, even if the
-production is affirming of trans rights.
-
-```
-0: No transphobic act is depicted in the story
-1: A transphobic act is depicted in the story
--: N/A
-?: Unknown
-```
-
-**Note**: If `normalizesTransphobia` is `1`, so is this.
-
 ### title
 
-The name of the movie or show in English. This is only for reference within the
-file, it is not used when the information is compiled.
+The name of the movie or show. This is only for reference for those consulting
+the `transphobic.tsv` file, it is not used elsewhere.
