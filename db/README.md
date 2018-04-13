@@ -42,7 +42,19 @@ cause to consider whether a title normalizes transphobia.
 ?: Unknown
 ```
 
-**Note**: If `transPlayedByCis` is `1`, so is this.
+**Note**: If `transPlayedByCis` or `transJokes` are `1`, so is this.
+
+### transJokes
+
+Whether there are one or more jokes that rely on ostracizing/stigmatizing 
+trans people, relationships with trans people, etc.
+
+```
+0: Does not contain jokes that marginalize trans people
+1: Contains jokes that marginalize trans people
+-: Not applicable
+?: Unknown
+```
 
 ### transPlayedByCis
 
