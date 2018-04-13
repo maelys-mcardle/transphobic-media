@@ -1,6 +1,7 @@
 imdb	transphobia	normalizesTransphobia	transJokes	transPlayedByCis	deadTrans	title
 tt4158624	1	1	0	1	0	3 Generations
 tt0496424	1	1	1	-	0	30 Rock
+tt0343660	1	1	1	1	0	50 First Dates
 tt3100636	1	1	1	1	0	52 Tuesdays
 tt5639354	1	?	0	0	0	A Fantastic Woman
 tt0109040	1	1	1	1	0	Ace Ventura: Pet Detective
@@ -11,12 +12,15 @@ tt6213952	1	1	0	1	?	Anything
 tt1486217	1	1	1	1	0	Archer
 tt0367279	1	1	1	-	0	Arrested Development
 tt0168987	1	1	0	1	0	Better Than Chocolate
+tt0120601	?	?	0	1	0	Being John Malkovich
 tt3823690	1	1	1	-	0	Bill Burr: I’m Sorry You Feel That Way
 tt1561755	1	1	1	1	0	Bob's Burgers
-tt3007302	1	0	0	0	0	Boy Meets Girl
+tt3007302	1	0	0	0	0	Boy Meets Girl (Movie)
+tt5000634	?	?	0	0	0	Boy Meets Girl (BBC Sitcom)
 tt0171804	1	1	0	1	1	Boys Don't Cry
 tt0460627	1	1	0	1	1	Bones
 tt0411195	1	1	0	1	0	Breakfast on Pluto
+tt0243155	1	1	1	1	0	Bridget Jones's Diary
 tt2578560	1	1	1	1	0	Broad City
 tt0290498	?	0	0	0	0	By Hook or by Crook
 tt1444382	1	1	1	-	0	Cake Boss
@@ -39,6 +43,8 @@ tt1582350	1	1	1	-	0	Episodes
 tt0182576	1	1	1	1	0	Family Guy
 tt0106004	1	1	1	-	0	Frasier
 tt0108778	1	1	1	1	0	Friends
+tt0149460	1	1	1	-	0	Futurama
+tt4689752	1	0	0	-	0	Frontline: Growing Up Trans
 tt1723816	1	1	1	-	0	Girls
 tt0045826	1	1	0	1	0	Glen or Glenda
 tt0413573	1	0	0	0	0	Grey's Anatomy
@@ -49,11 +55,13 @@ tt4406114	?	0	0	0	0	Happy Birthday, Marsha
 tt0251512	1	1	1	-	0	HBO Comedy Half-Hour
 tt0248845	1	1	0	1	0	Hedwig and the Angry Inch
 tt2232345	1	1	0	1	0	Hit & Miss
+tt0412142	1	1	1	1	0	House
 tt0460649	1	1	1	-	0	How I Met Your Mother
 tt4733278	1	0	0	-	0	I Am Cait
 tt4523638	?	0	0	-	0	I Am Jazz
 tt0472954	1	1	1	-	0	It’s Always Sunny In Philadelphia
 tt0810913	1	1	0	-	0	Jack & Jill
+tt0118364	1	1	1	1	0	Just Shoot Me!
 tt1981558	1	1	1	-	0	Key & Peele
 tt0118375	1	1	1	1	0	King of the Hill
 tt0089424	1	1	0	1	1	Kiss of the Spider Woman
@@ -72,6 +80,7 @@ tt2372162	?	0	0	0	0	Orange Is the New Black
 tt0107756	1	1	1	1	0	Orlando
 tt2060540	1	1	1	-	0	Patton Oswalt: Finest Hour
 tt1266020	1	1	1	-	0	Parks and Recreation
+tt1578873	1	1	1	1	0	Pretty Little Liars
 tt0054215	1	1	0	1	0	Psycho
 tt0380136	1	1	1	-	0	Qi
 tt7830574	1	1	1	-	0	Ricky Gervais: Humanity
@@ -89,9 +98,10 @@ tt0096119	1	1	0	1	0	Sleepaway Camp III
 tt0102951	1	1	0	1	0	Soapdish
 tt0324013	1	1	0	1	0	Soldier's Girl
 tt0121955	1	1	1	1	0	South Park
+tt3061046	0	0	0	0	0	Steven Universe
 tt1741256	1	1	1	1	0	Suburgatory
 tt1031283	1	1	1	1	0	Superjail!
-tt3824458	?	0	0	0	0	Tangerine
+tt3824458	0	0	0	0	0	Tangerine
 tt2637276	1	1	1	-	0	Ted 2
 tt1847731	1	1	0	-	0	Tomboy
 tt0405422	1	1	1	-	0	The 40 Year Old Virgin
@@ -99,7 +109,9 @@ tt0109045	1	1	0	1	0	The Adventures of Priscilla, Queen of the Desert
 tt5034474	1	1	0	1	0	The Assignment
 tt0286493	1	1	1	1	1	The Badge
 tt0898266	1	1	1	-	0	The Big Bang Theory
+tt3639956	1	1	1	1	0	The Centre
 tt0065549	1	1	0	1	0	The Christine Jorgensen Story
+tt1195935	1	1	1	1	0	The Cleveland Show
 tt3203616	1	1	1	?	0	The Cobbler
 tt0458254	1	1	1	-	0	The Colbert Report
 tt2710104	1	1	0	0	0	The Crazy Ones
@@ -108,8 +120,9 @@ tt0104036	1	1	0	1	0	The Crying Game
 tt0115147	1	1	1	-	0	The Daily Show
 tt0810819	1	1	0	1	1	The Danish Girl
 tt2244495	1	1	1	-	0	The Eric André Show
-tt0487831	1	1	1	1	0	The IT Crowd
+tt2262532	?	0	0	0	0	The Fosters
 tt1411697	1	1	1	0	0	The Hangover Part II
+tt0487831	1	1	1	1	0	The IT Crowd
 tt6567314	1	1	1	-	0	The Joe Rogan Experience
 tt0330251	1	1	0	1	0	The L Word
 tt5233558	?	0	0	-	0	The Death and Life of Marsha P. Johnson
@@ -122,6 +135,7 @@ tt2203939	1	1	1	-	0	The Other Woman
 tt3221558	1	1	1	-	0	The People's Couch
 tt0096697	1	1	1	1	0	The Simpsons
 tt1189073	1	1	0	-	0	The Skin I Live In
+tt3096062	?	0	0	0	0	The Switch
 tt0840979	1	1	1	1	0	The Whitest Kids U'Know
 tt0084917	1	1	0	1	0	The World According to Garp
 tt0106179	1	1	0	1	0	The X-Files
@@ -132,4 +146,6 @@ tt3502262	1	1	0	1	0	Transparent
 tt2380303	1	1	1	-	0	TripTank
 tt0369179	1	1	1	1	0	Two and a Half Men
 tt0381707	1	1	0	-	0	White Chicks
+tt0157246	1	1	1	-	0	Will & Grace
+tt1826951	1	1	0	-	0	Work It
 tt1608290	1	1	1	1	0	Zoolander 2
