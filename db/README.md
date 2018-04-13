@@ -47,7 +47,8 @@ cause to consider whether a title normalizes transphobia.
 ### transJokes
 
 Whether there are one or more jokes that rely on ostracizing/stigmatizing 
-trans people, relationships with trans people, etc.
+trans people, relationships with trans people, etc. Jokes that punch down,
+instead of up.
 
 ```
 0: Does not contain jokes that marginalize trans people
