@@ -18,7 +18,7 @@ even if the production itself is affirming of trans rights.
 ```
 0: No transphobia in the content
 1: Transphobic or depicts transphobia
--: N/A
+-: Not applicable
 ?: Unknown
 ```
 
@@ -38,7 +38,7 @@ cause to consider whether a title normalizes transphobia.
 ```
 0: Does not contribute to the marginalization of trans people
 1: Contributes to the marginalization of trans people
--: N/A
+-: Not applicable
 ?: Unknown
 ```
 
@@ -46,12 +46,14 @@ cause to consider whether a title normalizes transphobia.
 
 ### transPlayedByCis
 
-Whether a trans role is played, in its entirety, by a cis actor.
+Whether a trans role is played, in its entirety, by a cis actor. If there
+is no trans role (eg. transphobic joke) or this is a documentary / real-life
+with no fictional roles, then use `-` for not applicable.
 
 ```
 0: No trans characters are played, in their entirety, by a cis actor
 1: A trans character is played, in its entirety, by a cis actor
--: N/A
+-: Not applicable
 ?: Unknown
 ```
 
@@ -64,7 +66,7 @@ trope.
 ```
 0: No trans characters die
 1: A trans character dies
--: N/A
+-: Not applicable
 ?: Unknown
 ```
 
