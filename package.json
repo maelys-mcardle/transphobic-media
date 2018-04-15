@@ -7,6 +7,10 @@
     "react-dom": "^16.3.1",
     "react-scripts": "1.1.4"
   },
+  "devDependencies": {
+    "datalib": "^1.8.0",
+    "node-fetch": "^2.1.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
