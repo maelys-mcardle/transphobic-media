@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import transphobicDb from './transphobic';
 import './App.css';
 
 class App extends Component {

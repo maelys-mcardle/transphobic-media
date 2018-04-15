@@ -1,7 +1,7 @@
 Cargo.lock
 api/target/*
 db/imdb.tsv
-public/transphobic.json
+src/transphobic.json
 node_modules/*
 */node_modules/*
 package-lock.json
