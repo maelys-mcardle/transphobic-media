@@ -8,11 +8,10 @@
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
-    "datalib": "^1.8.0",
     "node-fetch": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node db/generatejson.js && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
