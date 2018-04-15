@@ -6,10 +6,12 @@ const generateJson = async () => {
   const remoteImdbUrl = 'https://datasets.imdbws.com/title.basics.tsv.gz';
   const localImdbPath = 'db/imdb.tsv';
   const transphobiaDbPath = 'db/transphobic.tsv';
+  const transphobiaDbJsonPath = 'db/transphobic.json';
 
   const rawImdbDb = await getImdbDatabase(remoteImdbUrl, localImdbPath);
-  const transphobiaDb = parseTransphobiaDb(transphobiaDbPath);
-  combineImdbTransphobiaData(rawImdbDb, transphobiaDb);
+  let transphobiaDb = parseTransphobiaDb(transphobiaDbPath);
+  transphobiaDb = combineImdbTransphobiaData(rawImdbDb, transphobiaDb);
+  writeTransphobiaDbJson(transphobiaDb, transphobiaDbJsonPath);
 };
 
 async function getImdbDatabase(url, localDatabasePath)
@@ -59,19 +61,18 @@ function parseTransphobiaDb(dbPath)
       transJokes: transJokes,
       transPlayedByCis: transPlayedByCis,
       deadTrans: deadTrans,
-      title: title
+      title: title,
+      year: null
     };
   }
 
   return transphobiaDb;
 }
 
-
 function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
 {
   // Get header.
   let [line, linePosition] = getNextLine(rawImdbDb, 0);
-  console.log(line);
 
   // Get entries.
   while (linePosition > 0) {
@@ -85,8 +86,14 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
       endYear,
       runtimeMinutes,
       genres] = line.split('\t');
-    console.log(tconst);
-  }  
+
+    if (parsedTransphobiaDb.hasOwnProperty(tconst)) {
+      parsedTransphobiaDb[tconst].title = primaryTitle;
+      parsedTransphobiaDb[tconst].year = startYear;
+    }
+  }
+
+  return parsedTransphobiaDb;
 }
 
 function getNextLine(fileContents, startPosition)
@@ -94,6 +101,12 @@ function getNextLine(fileContents, startPosition)
   const endPosition = fileContents.indexOf('\n', startPosition);
   const line = fileContents.slice(startPosition, endPosition);
   return [line, endPosition];
+}
+
+function writeTransphobiaDbJson(transphobiaDb, outputPath)
+{
+  const transphobiaDbAsJson = JSON.stringify(transphobiaDb);
+  fs.writeFileSync(outputPath, transphobiaDbAsJson);
 }
 
 generateJson();
