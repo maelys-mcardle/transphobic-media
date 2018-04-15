@@ -1,8 +1,0 @@
-[package]
-name = "transphobic-media"
-version = "0.1.0"
-authors = ["Maëlys McArdle"]
-
-[dependencies]
-rocket = "0.3.8"
-rocket_codegen = "0.3.8"
