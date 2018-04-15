@@ -1,17 +1,71 @@
 const fetch = require('node-fetch');
 const zlib = require('zlib');
-const datalib = require('datalib');
 const fs = require('fs');
 
 const generateJson = async () => {
   const remoteImdbUrl = 'https://datasets.imdbws.com/title.basics.tsv.gz';
   const localImdbPath = 'db/imdb.tsv';
-  const transphobiaDb = 'db/transphobic.tsv';
+  const transphobiaDbPath = 'db/transphobic.tsv';
 
   const rawImdbDb = await getImdbDatabase(remoteImdbUrl, localImdbPath);
-  const parsedTransphobiaDb = parseTsvData(transphobiaDb);
-  combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb);
+  const transphobiaDb = parseTransphobiaDb(transphobiaDbPath);
+  combineImdbTransphobiaData(rawImdbDb, transphobiaDb);
 };
+
+async function getImdbDatabase(url, localDatabasePath)
+{
+  if (!fs.existsSync(localDatabasePath)) {
+    // No local copy of database. Download it and save it to file.
+    const imdbDatabase = await downloadImdbDatabase(url);
+    fs.writeFileSync(localDatabasePath, imdbDatabase);
+    return imdbDatabase;
+  } else {
+    // Local copy of database. Use it.
+    const imdbDatabase = fs.readFileSync(localDatabasePath).toString();
+    return imdbDatabase;
+  }
+}
+
+async function downloadImdbDatabase(url)
+{
+  const response = await fetch(url);
+  const gzipedDatabase = await response.buffer();
+  const rawDatabase = zlib.gunzipSync(gzipedDatabase);
+  return rawDatabase;
+}
+
+function parseTransphobiaDb(dbPath)
+{
+  const rawTransphobiaDb = fs.readFileSync(dbPath).toString();
+  let transphobiaDb = {};
+
+  // Get header.
+  let [line, linePosition] = getNextLine(rawTransphobiaDb, 0);
+
+  // Get entries.
+  while (linePosition > 0) {
+    [line, linePosition] = getNextLine(rawTransphobiaDb, linePosition + 1);
+    let [imdb,
+      transphobia,
+      normalizesTransphobia,
+      transJokes,
+      transPlayedByCis,
+      deadTrans,
+      title] = line.split('\t');
+
+    transphobiaDb[imdb] = {
+      transphobia: transphobia,
+      normalizesTransphobia: normalizesTransphobia,
+      transJokes: transJokes,
+      transPlayedByCis: transPlayedByCis,
+      deadTrans: deadTrans,
+      title: title
+    };
+  }
+
+  return transphobiaDb;
+}
+
 
 function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
 {
@@ -40,34 +94,6 @@ function getNextLine(fileContents, startPosition)
   const endPosition = fileContents.indexOf('\n', startPosition);
   const line = fileContents.slice(startPosition, endPosition);
   return [line, endPosition];
-}
-
-async function getImdbDatabase(url, localDatabasePath)
-{
-  if (!fs.existsSync(localDatabasePath)) {
-    // No local copy of database. Download it and save it to file.
-    const imdbDatabase = await downloadImdbDatabase(url);
-    fs.writeFileSync(localDatabasePath, imdbDatabase);
-    return imdbDatabase;
-  } else {
-    // Local copy of database. Use it.
-    const imdbDatabase = fs.readFileSync(localDatabasePath).toString();
-    return imdbDatabase;
-  }
-}
-
-async function downloadImdbDatabase(url)
-{
-  const response = await fetch(url);
-  const gzipedDatabase = await response.buffer();
-  const rawDatabase = zlib.gunzipSync(gzipedDatabase);
-  return rawDatabase;
-}
-
-function parseTsvData(tsvData)
-{
-  const parsedData = datalib.read(tsvData, {type: 'tsv', parse: 'auto'});
-  return parsedData;
 }
 
 generateJson();
