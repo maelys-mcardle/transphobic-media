@@ -6,7 +6,7 @@ const generateJson = async () => {
   const remoteImdbUrl = 'https://datasets.imdbws.com/title.basics.tsv.gz';
   const localImdbPath = 'db/imdb.tsv';
   const transphobiaDbPath = 'db/transphobic.tsv';
-  const transphobiaDbJsonPath = 'db/transphobic.json';
+  const transphobiaDbJsonPath = 'public/transphobic.json';
 
   const rawImdbDb = await getImdbDatabase(remoteImdbUrl, localImdbPath);
   let transphobiaDb = parseTransphobiaDb(transphobiaDbPath);
