@@ -1,6 +1,6 @@
 Cargo.lock
 api/target/*
-title.basics.tsv
+db/imdb.tsv
 node_modules/*
 */node_modules/*
 package-lock.json
