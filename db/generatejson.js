@@ -56,17 +56,33 @@ function parseTransphobiaDb(dbPath)
       title] = line.split('\t');
 
     transphobiaDb[imdb] = {
-      transphobia: transphobia == 1,
-      normalizesTransphobia: normalizesTransphobia == 1,
-      transJokes: transJokes == 1,
-      transPlayedByCis: transPlayedByCis == 1,
-      deadTrans: deadTrans == 1,
+      transphobia: tsvValueToJson(transphobia),
+      normalizesTransphobia: tsvValueToJson(normalizesTransphobia),
+      transJokes: tsvValueToJson(transJokes),
+      transPlayedByCis: tsvValueToJson(transPlayedByCis),
+      deadTrans: tsvValueToJson(deadTrans),
       title: title,
-      year: null
+      year: undefined
     };
   }
 
   return transphobiaDb;
+}
+
+function tsvValueToJson(value)
+{
+  switch(value) {
+    case '0':
+      return false;
+    case '1':
+      return true;
+    case '-':
+      return null;
+    case '?':
+      return undefined;
+    default:
+      return undefined;
+  }
 }
 
 function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
