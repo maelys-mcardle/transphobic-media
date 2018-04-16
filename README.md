@@ -5,7 +5,13 @@ repository to identify films & tv with transphobic content.
 
 ## Running the Server Locally
 
-To install the server, run the following command:
+First, download the source code:
+
+```
+git clone git@github.com:maelys-mcardle/transphobic-media.git
+```
+
+Then run the following command to install the dependencies:
 
 ```
 npm i
