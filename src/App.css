@@ -13,5 +13,6 @@ body {
 }
 
 .badge-padding {
+  font-size: 1.5em;
   padding: 10px;
 }

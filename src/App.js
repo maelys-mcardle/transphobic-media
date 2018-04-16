@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import transphobicDb from './transphobic';
-import logo from './logo.svg';
 import './App.css';
 
 class NavBar extends Component {
@@ -8,8 +7,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light bg-light navbar-top">
         <a className="navbar-brand" href="#nowhere">
-          <img src={logo}
-            className="d-inline-block align-top nav-logo" alt="" />
+          <i class="fas fa-comments"></i>
           Transphobic Media
         </a>
       </nav>
@@ -39,25 +37,27 @@ class List extends Component {
 class ListItem extends Component {
 
   getBadge() {
-    let text = 'Unknown';
+    let iconClass = 'fas fa-question';
     let className = 'badge badge-padding ';
 
     if (this.props.transphobia === undefined) {
-      text = 'Unknown';
+      iconClass = 'fas fa-question';
       className += 'badge-secondary';
     } else if (this.props.transphobia === null) {
-      text = 'N/A';
+      iconClass = 'fas fa-minus';
       className += 'badge-secondary';
     } else if (this.props.transphobia === true) {
-      text = 'Warning';
+      iconClass = 'far fa-thumbs-down';
       className += 'badge-danger';
     } else if (this.props.transphobia === false) {
-      text = 'No transphobia!';
+      iconClass = 'far fa-thumbs-up';
       className += 'badge-primary';
     }
 
     return (
-      <span className={className}>{text}</span>
+      <span className={className}>
+        <i className={iconClass}></i>
+      </span>
     )
   }
 
@@ -78,7 +78,7 @@ class App extends Component {
     return (
       <div class="container">
         <NavBar />
-        <h1>List of Titles</h1>
+        <h1>All Titles</h1>
         <List entries={transphobicDb} />
       </div>
     );
