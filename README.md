@@ -3,19 +3,22 @@
 This is the code that makes up the transphobic.media website, an online
 repository to identify films & tv with transphobic content.
 
-## Running the Server Locally
+## Installing the server
 
-First, download the source code:
+Run the following commands to install:
 
 ```
+# Download the source code.
 git clone git@github.com:maelys-mcardle/transphobic-media.git
-```
 
-Then run the following command to install the dependencies:
+# Switch into the source directory.
+cd transphobic-media
 
-```
+# Install the dependencies.
 npm i
 ```
+
+## Running the server
 
 To run the server, run the following:
 
