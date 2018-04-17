@@ -6,10 +6,11 @@ class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-light bg-light navbar-top">
-        <a className="navbar-brand" href="#nowhere">
+        <span className="navbar-brand">
           <i class="fas fa-comments"></i>
-          Transphobic Media
-        </a>
+          &nbsp;
+          <strong><em>Is it Transphobic?</em></strong>
+        </span>
       </nav>
     );
   }
@@ -36,36 +37,66 @@ class List extends Component {
 
 class ListItem extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      tooltip: false
+    };
+
+    this.showTooltip = this.showTooltip.bind(this);
+    this.hideTooltip = this.hideTooltip.bind(this);
+  }
+
   getBadge() {
-    let iconClass = 'fas fa-question';
+    let iconClass = 'fas fa-question-circle';
     let className = 'badge badge-padding ';
+    let text = 'Unsure'
 
     if (this.props.transphobia === undefined) {
-      iconClass = 'fas fa-question';
+      iconClass = 'fas fa-question-circle';
       className += 'badge-secondary';
+      text = 'Unsure';
     } else if (this.props.transphobia === null) {
-      iconClass = 'fas fa-minus';
+      iconClass = 'fas fa-circle';
       className += 'badge-secondary';
+      text = 'Not Applicable';
     } else if (this.props.transphobia === true) {
-      iconClass = 'far fa-thumbs-down';
+      iconClass = 'fas fa-exclamation-circle';
       className += 'badge-danger';
+      text = 'Warning';
     } else if (this.props.transphobia === false) {
-      iconClass = 'far fa-thumbs-up';
+      iconClass = 'fas fa-smile';
       className += 'badge-primary';
+      text = 'No Transphobia';
     }
 
     return (
       <span className={className}>
+        {this.state.tooltip ? ' ' + text + ' ' : ''}
         <i className={iconClass}></i>
       </span>
     )
+  }
+
+  showTooltip() {
+    this.setState({
+      tooltip: true,
+    })
+  }
+
+  hideTooltip() {
+    this.setState({
+      tooltip: false
+    })
   }
 
   render() {
     return (
       <a 
         href="#test"
-        className="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+        className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+        onMouseOver={this.showTooltip}
+        onMouseOut={this.hideTooltip}>
         {this.props.title}
         {this.getBadge()}
       </a>
@@ -78,7 +109,7 @@ class App extends Component {
     return (
       <div class="container">
         <NavBar />
-        <h1>All Titles</h1>
+        <h2>All Titles</h2>
         <List entries={transphobicDb} />
       </div>
     );
