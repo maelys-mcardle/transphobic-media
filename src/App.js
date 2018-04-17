@@ -219,15 +219,15 @@ class Details extends Component {
   renderTransPlayedText(transPlayedByCis) {
     switch (transPlayedByCis) {
       case undefined:
-        return 'Unsure if a trans character is played exclusively by a cis actor';
+        return 'Unsure if a trans character is portrayed exclusively by a cis actor';
       case null: 
-        return 'No fictitious trans characters to be played';
+        return 'No fictitious trans characters to be portrayed';
       case false: 
-        return 'Trans character(s) are played by trans actor(s)';
+        return 'Trans characters are portrayed by trans actors';
       case true: 
-        return 'Trans character(s) are played by cis actor(s)';
+        return 'A trans character is exclusively portrayed by a cis actor';
       default: 
-        return 'Unsure if a trans character is played exclusively by a cis actor';
+        return 'Unsure if a trans character is portrayed by a cis actor';
     }
   }
 
