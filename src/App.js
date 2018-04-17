@@ -7,10 +7,16 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light bg-light navbar-top">
         <span className="navbar-brand">
-          <i class="fas fa-comments"></i>
+          <i className="fas fa-comments"></i>
           &nbsp;
           <strong><em>Is it Transphobic?</em></strong>
         </span>
+        <form className="form-inline my-2 my-lg-0">
+          <input className="form-control mr-sm-2" 
+            type="search" 
+            placeholder="Search" 
+            aria-label="Search" />
+        </form>
       </nav>
     );
   }
@@ -313,6 +319,17 @@ class App extends Component {
         <NavBar />
         <h2>All Titles</h2>
         <List entries={transphobicDb} />
+        <div className="text-muted">
+          Do you have suggestions for titles that should be added
+          or corrections to existing ones?
+          &#8239;
+          <a
+            rel="noopener noreferrer" 
+            href="https://github.com/maelys-mcardle/transphobic-media/issues"
+            target="_blank">
+            Submit them here
+          </a>.
+        </div>
       </div>
     );
   }
