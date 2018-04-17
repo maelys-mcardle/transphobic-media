@@ -244,8 +244,14 @@ class Details extends Component {
     return 'https://www.imdb.com/title/' + imdbCode + '/';
   }
 
-  webSearchUrl(title) {
-    return 'https://duckduckgo.com/?q=' + encodeURI(title + ' transphobia');
+  webSearchUrl(title, transphobia) {
+    if (transphobia) {
+      return 'https://duckduckgo.com/?q=' + 
+        encodeURIComponent(title + ' transphobia');
+    } else {
+      return 'https://duckduckgo.com/?q=' + 
+        encodeURIComponent(title);
+    }
   }
 
   render() {
@@ -282,12 +288,16 @@ class Details extends Component {
           </li>
         </ul>
         <div class="card-footer">
-          <a className="btn btn-primary" href={this.imdbUrl(this.props.imdb)}>
+          <a className="btn btn-primary" 
+            href={this.imdbUrl(this.props.imdb)}
+            target="_blank">
             IMDB Page
           </a>
           &nbsp;
           <a className="btn btn-primary" 
-            href={this.webSearchUrl(this.props.data.title)}>
+            href={this.webSearchUrl(this.props.data.title, 
+              this.props.data.transphobia)}
+            target="_blank">
             Search Web for Title
           </a>
         </div>
