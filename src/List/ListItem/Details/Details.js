@@ -59,9 +59,9 @@ export default class Details extends Component {
       case null: 
         return 'Not applicable if this normalizes transphobia';
       case false: 
-        return 'This normalizes transphobia';
-      case true: 
         return 'This does not normalize transphobia';
+      case true: 
+        return 'This normalizes transphobia';
       default: 
         return 'Unsure if this normalizes transphobia';
     }
@@ -87,7 +87,7 @@ export default class Details extends Component {
       case undefined:
         return 'Unsure if a trans character is portrayed exclusively by a cis actor';
       case null: 
-        return 'No fictitious trans characters to be portrayed (eg. documentary)';
+        return 'Contains no trans characters (eg. stand-up comedy, documentary)';
       case false: 
         return 'Trans characters are portrayed by trans actors';
       case true: 
