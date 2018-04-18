@@ -2,10 +2,14 @@ body {
   margin-bottom: 3em;
 }
 
-.nav-logo {
+.navbar-logo {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+.navbar-title {
+  font-family: 'Pacifico', cursive;
 }
 
 .navbar-top {
