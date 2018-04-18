@@ -20,3 +20,7 @@ body {
   font-size: 1.2em;
   padding: 10px;
 }
+
+.badge-space-right {
+  margin-right: 0.5em;
+}

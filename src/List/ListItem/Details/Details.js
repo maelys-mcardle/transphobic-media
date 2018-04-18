@@ -15,25 +15,25 @@ export default class Details extends Component {
 
   badgeUnsure() {
     return (
-      <i class="fas fa-question"></i>
+      <i class="fas fa-question badge-space-right"></i>
     )
   }
 
   badgeNotApplicable() {
     return (
-      <i class="fas fa-minus"></i>
+      <i class="fas fa-minus badge-space-right"></i>
     )
   }
 
   badgeOkay() {
     return (
-      <i class="fas fa-check"></i>
+      <i class="fas fa-check badge-space-right"></i>
     )
   }
 
   badgeNotOkay() {
     return (
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times badge-space-right"></i>
     )
   }
 
@@ -135,12 +135,10 @@ export default class Details extends Component {
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             {this.renderBadge(this.props.data.transphobia)}
-            &nbsp;
             {this.renderTransphobiaText(this.props.data.transphobia)}
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.normalizesTransphobia)}
-            &nbsp;
             {this.renderNormalizesText(this.props.data.normalizesTransphobia)}
           </li>
           <li className="list-group-item">
@@ -150,12 +148,10 @@ export default class Details extends Component {
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.transPlayedByCis)}
-            &nbsp;
             {this.renderTransPlayedText(this.props.data.transPlayedByCis)}
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.deadTrans)}
-            &nbsp;
             {this.renderDeadTransText(this.props.data.deadTrans)}
           </li>
         </ul>
