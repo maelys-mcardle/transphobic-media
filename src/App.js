@@ -235,15 +235,15 @@ class Details extends Component {
   renderDeadTransText(deadTrans) {
     switch (deadTrans) {
       case undefined:
-        return 'Unsure if a trans person dies';
+        return 'Unsure if a trans person dies of causes other than old age';
       case null: 
-        return 'No trans people featured';
+        return 'No trans characters pass away (no trans people featured)';
       case false: 
-        return 'No trans characters die';
+        return 'No trans characters pass away';
       case true: 
         return 'A trans character dies of causes other than old age';
       default: 
-        return 'Unsure if a trans person dies';
+        return 'Unsure if a trans person dies of causes other than old age';
     }
   }
 
