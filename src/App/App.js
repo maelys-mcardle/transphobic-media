@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import allTransphobiaDbEntries from './transphobic';
+import allTransphobiaDbEntries from '../transphobic';
 import NavBar from './NavBar/NavBar';
 import List from './List/List';
 import Footer from './Footer/Footer';
