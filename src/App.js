@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import transphobicDb from './transphobic';
+import allTransphobiaDbEntries from './transphobic';
 import './App.css';
 
 class NavBar extends Component {
@@ -14,8 +14,9 @@ class NavBar extends Component {
         <form className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" 
             type="search" 
-            placeholder="Search" 
-            aria-label="Search" />
+            placeholder="Search"
+            aria-label="Search" 
+            onChange={evt => this.props.searchFunction(evt.target.value)}/>
         </form>
       </nav>
     );
@@ -35,7 +36,7 @@ class List extends Component {
 
   render() {
     return (
-      <ul class="list-group">
+      <ul className="list-group">
         {this.getListItems()}
       </ul>
     );
@@ -313,12 +314,49 @@ class Details extends Component {
 }
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      entriesToShow: allTransphobiaDbEntries,
+      searchTerm: ''
+    }
+    this.searchDbEntries = this.searchDbEntries.bind(this);
+  }
+
+  searchDbEntries(searchTerm) {
+
+    let searchResults = allTransphobiaDbEntries;
+    if (searchTerm) {
+      let imdbKeysForSearchResults = Object.keys(
+        allTransphobiaDbEntries).filter(
+          imdb => allTransphobiaDbEntries[imdb].title.toLowerCase().includes(
+            searchTerm.toLowerCase()));
+
+      searchResults = imdbKeysForSearchResults.map( 
+        imdb => allTransphobiaDbEntries[imdb]);
+    }
+
+    this.setState({
+      searchTerm: searchTerm,
+      entriesToShow: searchResults
+    })
+  }
+
+  renderTitle() {
+    if (this.state.searchTerm) {
+      return 'Searching for "' + this.state.searchTerm + '"';
+    } else {
+      return 'All Titles'
+    }
+  }
+
   render() {
     return (
-      <div class="container">
-        <NavBar />
-        <h2>All Titles</h2>
-        <List entries={transphobicDb} />
+      <div className="container">
+        <NavBar searchFunction={this.searchDbEntries} />
+        <h2>{this.renderTitle()}</h2>
+        <List entries={this.state.entriesToShow} />
         <div className="text-muted">
           Do you have suggestions for titles that should be added
           or corrections to existing ones?
