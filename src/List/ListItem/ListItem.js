@@ -79,10 +79,14 @@ export default class ListItem extends Component {
     }
   }
 
+  getUrl() {
+    return '#' + this.props.imdb
+  }
+
   render() {
     return (
       <a 
-        href="#test"
+        href={this.getUrl()}
         className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
         onMouseOver={this.showTooltip}
         onMouseOut={this.hideTooltip}
