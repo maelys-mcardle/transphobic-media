@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Details from './Details/Details';
-import '../../App.css';
 
 export default class ListItem extends Component {
 

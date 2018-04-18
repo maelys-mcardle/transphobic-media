@@ -1,0 +1,14 @@
+
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  font-family: 'Pacifico', cursive;
+}
+
+.navbar-top {
+  margin-bottom: 2em;
+}

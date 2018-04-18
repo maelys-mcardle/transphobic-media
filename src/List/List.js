@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ListItem from './ListItem/ListItem';
-import '../App.css';
+import './List.css';
 
 export default class List extends Component {
 
