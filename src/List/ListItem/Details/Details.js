@@ -59,9 +59,9 @@ export default class Details extends Component {
       case null: 
         return 'Not applicable if this normalizes transphobia';
       case false: 
-        return 'This does not normalize transphobia';
+        return 'Does not normalize transphobia';
       case true: 
-        return 'This normalizes transphobia';
+        return 'Normalizes transphobia';
       default: 
         return 'Unsure if this normalizes transphobia';
     }
@@ -143,7 +143,6 @@ export default class Details extends Component {
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.transJokes)}
-            &nbsp;
             {this.renderTransJokesText(this.props.data.transJokes)}
           </li>
           <li className="list-group-item">
