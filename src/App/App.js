@@ -36,7 +36,7 @@ class App extends Component {
 
   renderTitle() {
     if (this.state.searchTerm) {
-      return 'Searching for "' + this.state.searchTerm + '"';
+      return `Searching for "${this.state.searchTerm}"`;
     } else {
       return 'All Titles'
     }
