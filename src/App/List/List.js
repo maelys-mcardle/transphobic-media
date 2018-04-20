@@ -32,6 +32,15 @@ export default class List extends Component {
           data={this.props.entries[imdb]} />
       )
     }
+
+    if (!listItems.length) {
+      listItems.push(
+        <li className="list-group-item disabled">
+          <em>No entries to show.</em>
+        </li>
+      )
+    }
+
     return listItems;
   }
 
