@@ -82,6 +82,19 @@ export default class ListItem extends Component {
     return '#' + this.props.imdb
   }
 
+  renderTitle() {
+    // Hide title on mobile devices when the details are shown.
+    if (this.state.details) {
+      return (
+        <span className="d-none d-md-block">
+          {this.props.title}
+        </span>
+      )
+    } else {
+      return this.props.title;
+    }
+  }
+
   render() {
     return (
       <a 
@@ -90,7 +103,7 @@ export default class ListItem extends Component {
         onMouseOver={this.showTooltip}
         onMouseOut={this.hideTooltip}
         onClick={this.toggleDetails}>
-        {this.props.title}
+        {this.renderTitle()}
         {this.getBadge()}
         {this.renderDetails()}
       </a>

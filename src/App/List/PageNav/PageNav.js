@@ -42,10 +42,10 @@ export default class PageNav extends Component {
   }
 
   renderPageLinks() {
-    let firstPage = Math.max(1, this.props.currentPage - 3);
-    let lastPage = Math.min(this.props.totalPages, firstPage + 6);
-    if (lastPage < firstPage + 6) {
-      firstPage = Math.max(1, lastPage - 6);
+    let firstPage = Math.max(1, this.props.currentPage - 2);
+    let lastPage = Math.min(this.props.totalPages, firstPage + 4);
+    if (lastPage < firstPage + 4) {
+      firstPage = Math.max(1, lastPage - 4);
     }
 
     let pageLinks = [];

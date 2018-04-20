@@ -165,7 +165,7 @@ export default class Details extends Component {
             href={this.webSearchUrl(this.props.data.title, 
               this.props.data.transphobia)}
             target="_blank">
-            Search Web for Title
+            Search Web
           </a>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default class NavBar extends Component {
         <span className="navbar-brand">
           <i className="fas fa-comments"></i>
           &nbsp;
-          <span className="navbar-title">
+          <span className="navbar-title d-none d-sm-inline">
             Is it Transphobic?
           </span>
         </span>
