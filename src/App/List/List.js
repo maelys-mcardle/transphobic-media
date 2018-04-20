@@ -55,6 +55,11 @@ export default class List extends Component {
     let totalPages = Math.max(
       Math.ceil(totalEntries / this.itemsPerPage),
       1);
+    if (this.state.currentPage > totalPages) {
+      this.setState({
+        currentPage: 1
+      })
+    }
     return (
       <div>
         <ul className="list-group">
