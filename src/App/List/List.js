@@ -7,26 +7,20 @@ export default class List extends Component {
 
   constructor(props) {
     super(props);
-    let itemsPerPage = 20;
-    let totalEntries = Object.keys(this.props.entries).length;
-    let totalPages = Math.max(
-      Math.ceil(totalEntries / itemsPerPage),
-      1);
+    this.itemsPerPage = 20;
     this.state = {
-      totalEntries: totalEntries,
-      itemsPerPage: itemsPerPage,
       currentPage: 1,
-      totalPages: totalPages
     };
     this.changePage = this.changePage.bind(this);
   }
 
-  getListItems() {
+  getListItems(totalEntries) {
     let listItems = [];
     let itemKeys = Object.keys(this.props.entries);
-    for (let entry = (this.state.currentPage - 1) * this.state.itemsPerPage;
-      entry < this.state.totalEntries &&
-      entry < this.state.currentPage * this.state.itemsPerPage;
+
+    for (let entry = (this.state.currentPage - 1) * this.itemsPerPage;
+      entry < totalEntries &&
+      entry < this.state.currentPage * this.itemsPerPage;
       entry++) 
     {
       let imdb = itemKeys[entry];
@@ -47,16 +41,26 @@ export default class List extends Component {
     })
   }
 
+  renderPageNav(totalPages) {
+    return (
+      <PageNav
+        changePage={this.changePage}
+        currentPage={this.state.currentPage} 
+        totalPages={totalPages} />
+    )
+  }
+
   render() {
+    let totalEntries = Object.keys(this.props.entries).length;
+    let totalPages = Math.max(
+      Math.ceil(totalEntries / this.itemsPerPage),
+      1);
     return (
       <div>
         <ul className="list-group">
-          {this.getListItems()}
+          {this.getListItems(totalEntries)}
         </ul>
-        <PageNav 
-          changePage={this.changePage}
-          currentPage={this.state.currentPage} 
-          totalPages={this.state.totalPages} />
+        {this.renderPageNav(totalPages)}
       </div>
     );
   }
