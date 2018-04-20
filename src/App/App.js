@@ -3,6 +3,7 @@ import allTransphobiaDbEntries from '../transphobic';
 import NavBar from './NavBar/NavBar';
 import List from './List/List';
 import Footer from './Footer/Footer';
+import './App.css';
 
 class App extends Component {
 
@@ -34,11 +35,29 @@ class App extends Component {
     })
   }
 
+  renderEntryCount() {
+    return(
+      <small className="text-muted entry-count">
+        ({Object.keys(this.state.entriesToShow).length} Entries)
+      </small>
+    )
+  }
+
   renderTitle() {
     if (this.state.searchTerm) {
-      return `Searching for "${this.state.searchTerm}"`;
+      return (
+        <h2>
+          Searching for "{this.state.searchTerm}"
+          {this.renderEntryCount()}
+        </h2>
+      )
     } else {
-      return 'All Titles'
+      return (
+        <h2>
+          All Titles
+          {this.renderEntryCount()}
+        </h2>
+      )
     }
   }
 
@@ -46,7 +65,7 @@ class App extends Component {
     return (
       <div className="container">
         <NavBar searchFunction={this.searchDbEntries} />
-        <h2>{this.renderTitle()}</h2>
+        {this.renderTitle()}
         <List entries={this.state.entriesToShow} />
         <Footer />
       </div>
