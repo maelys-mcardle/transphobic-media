@@ -11,11 +11,11 @@ export default class Title extends Component {
     )
   }
 
-  renderTitle() {
-    if (this.props.searchTerm) {
+  render() {
+    if (this.props.searchTerm.length) {
       return (
         <h2>
-          Searching for "{this.state.searchTerm}"
+          Searching for "{this.props.searchTerm}"
           {this.renderEntryCount()}
         </h2>
       )
@@ -27,14 +27,5 @@ export default class Title extends Component {
         </h2>
       )
     }
-  }
-
-  render() {
-    return (
-      <h2>
-        All Titles
-        {this.renderEntryCount()}
-      </h2>
-    );
   }
 }
