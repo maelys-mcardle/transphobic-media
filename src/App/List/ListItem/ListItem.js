@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Details from './Details/Details';
+import './ListItem.css';
 
 export default class ListItem extends Component {
 
@@ -98,8 +99,7 @@ export default class ListItem extends Component {
   render() {
     return (
       <a 
-        href={this.getUrl()}
-        className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+        className="list-group-item cursor-pointer list-group-item-action d-flex justify-content-between align-items-center"
         onMouseOver={this.showTooltip}
         onMouseOut={this.hideTooltip}
         onClick={this.toggleDetails}>
