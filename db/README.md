@@ -1,16 +1,17 @@
 # Transphobic Media Database
 
-The format of the database is in a tab-delimited `.tsv` file with the raw
-data stored in the `transphobic.tsv` file.
+The format of the database is in a 
+[tab-delimited file](https://en.wikipedia.org/wiki/Tab-separated_values)
+with the raw data stored in `transphobic.tsv`.
 
 ## Fields
 
-### imdb
+### imdb: The IMDB identifier
 
 The IMDB identifier for the movie or show. If the url for the production is
 `www.imdb.com/title/tt0109445/`, then the identifier would be `tt0109445`.
 
-### transphobia
+### transphobia: Is it transphobic?
 
 Whether the media is transphobic or contains depictions of transphobia 
 even if the production itself is affirming of trans rights.
@@ -24,7 +25,7 @@ even if the production itself is affirming of trans rights.
 
 **Note**: If `normalizesTransphobia` is `1`, so is this.
 
-### normalizesTransphobia
+### normalizesTransphobia: Does it normalize transphobia?
 
 Whether it normalizes transphobia. This includes media containing transphobic 
 jokes and productions that cast cis men to play trans women.
@@ -44,7 +45,7 @@ cause to consider whether a title normalizes transphobia.
 
 **Note**: If `transPlayedByCis` or `transJokes` are `1`, so is this.
 
-### transJokes
+### transJokes: Are there jokes disparaging trans people?
 
 Whether there are one or more jokes that rely on ostracizing/stigmatizing 
 trans people, relationships with trans people, etc. Jokes that punch down,
@@ -57,7 +58,7 @@ instead of up.
 ?: Unknown
 ```
 
-### transPlayedByCis
+### transPlayedByCis: Is a trans character exclusively played by a cis actor?
 
 Whether a trans role is played, in its entirety, by a cis actor. If there
 is no trans role (eg. transphobic joke) or this is a documentary / real-life
@@ -70,7 +71,7 @@ with no fictional roles, then use `-` for not applicable.
 ?: Unknown
 ```
 
-### deadTrans
+### deadTrans: Does a trans character die of causes other than old age?
 
 Whether a trans character dies, for any reason other than old age. See the
 [bury your gays](http://tvtropes.org/pmwiki/pmwiki.php/Main/BuryYourGays) 
@@ -83,7 +84,7 @@ trope.
 ?: Unknown
 ```
 
-### title
+### title: The name of the movie or television show
 
 The name of the movie or show. This is only for reference for those consulting
 the `transphobic.tsv` file, it is not used elsewhere.

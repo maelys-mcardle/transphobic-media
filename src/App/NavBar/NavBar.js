@@ -13,6 +13,12 @@ export default class NavBar extends Component {
           </span>
         </span>
         <form className="form-inline my-2 my-lg-0">
+          <a className="btn btn-outline-secondary criteria-button d-none d-md-inline"
+            rel="noopener noreferrer" 
+            href="https://github.com/maelys-mcardle/transphobic-media/tree/master/db"
+            target="_blank">
+            Explanation of Criteria
+          </a>
           <input className="form-control mr-sm-2" 
             type="search" 
             placeholder="Search"
