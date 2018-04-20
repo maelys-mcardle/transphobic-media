@@ -1,9 +1,9 @@
 # Transphobic Media
 
-This is the code that makes up the transphobic.media website, an online
-repository to identify films & tv with transphobic content.
+This is the code to create an online repository of transphobic movies
+and television shows.
 
-## Installing the server
+## Installing the server locally
 
 Run the following commands to install:
 

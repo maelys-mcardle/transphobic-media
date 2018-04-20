@@ -6,26 +6,27 @@ with the raw data stored in `transphobic.tsv`.
 
 ## Fields
 
-### imdb: The IMDB identifier
+### `imdb`: The IMDB identifier
 
 The IMDB identifier for the movie or show. If the url for the production is
 `www.imdb.com/title/tt0109445/`, then the identifier would be `tt0109445`.
 
-### transphobia: Is it transphobic?
+### `transphobia`: Is it transphobic?
 
-Whether the media is transphobic or contains depictions of transphobia 
-even if the production itself is affirming of trans rights.
+Whether the media contains depictions of transphobia or is itself
+transphobic. This is the main identifier used to let others know that
+consuming the content might not be care-free.
 
 ```
 0: No transphobia in the content
-1: Transphobic or depicts transphobia
+1: Depicts transphobia or is itself transphobic
 -: Not applicable
 ?: Unknown
 ```
 
 **Note**: If `normalizesTransphobia` is `1`, so is this.
 
-### normalizesTransphobia: Does it normalize transphobia?
+### `normalizesTransphobia`: Does it normalize transphobia?
 
 Whether it normalizes transphobia. This includes media containing transphobic 
 jokes and productions that cast cis men to play trans women.
@@ -45,7 +46,7 @@ cause to consider whether a title normalizes transphobia.
 
 **Note**: If `transPlayedByCis` or `transJokes` are `1`, so is this.
 
-### transJokes: Are there jokes disparaging trans people?
+### `transJokes`: Are there jokes disparaging trans people?
 
 Whether there are one or more jokes that rely on ostracizing/stigmatizing 
 trans people, relationships with trans people, etc. Jokes that punch down,
@@ -58,11 +59,11 @@ instead of up.
 ?: Unknown
 ```
 
-### transPlayedByCis: Is a trans character exclusively played by a cis actor?
+### `transPlayedByCis`: Is a trans character exclusively played by a cis actor?
 
 Whether a trans role is played, in its entirety, by a cis actor. If there
-is no trans role (eg. transphobic joke) or this is a documentary / real-life
-with no fictional roles, then use `-` for not applicable.
+are no trans characters or this is a documentary / reality show with no 
+fictional roles, then use `-` for not applicable.
 
 ```
 0: No trans characters are played, in their entirety, by a cis actor
@@ -71,7 +72,7 @@ with no fictional roles, then use `-` for not applicable.
 ?: Unknown
 ```
 
-### deadTrans: Does a trans character die of causes other than old age?
+### `deadTrans`: Does a trans character die of causes other than old age?
 
 Whether a trans character dies, for any reason other than old age. See the
 [bury your gays](http://tvtropes.org/pmwiki/pmwiki.php/Main/BuryYourGays) 
@@ -84,7 +85,7 @@ trope.
 ?: Unknown
 ```
 
-### title: The name of the movie or television show
+### `title`: The name of the movie or television show
 
 The name of the movie or show. This is only for reference for those consulting
 the `transphobic.tsv` file, it is not used elsewhere.
