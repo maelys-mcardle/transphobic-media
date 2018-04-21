@@ -113,13 +113,13 @@ export default class Details extends Component {
   }
 
   imdbUrl(imdbCode) {
-    return 'https://www.imdb.com/title/' + imdbCode + '/';
+    return `https://www.imdb.com/title/${imdbCode}/`;
   }
 
   webSearchUrl(title, transphobia) {
     if (transphobia) {
       return 'https://duckduckgo.com/?q=' + 
-        encodeURIComponent(title + ' transphobia');
+        encodeURIComponent(`"${title}" transphobia`);
     } else {
       return 'https://duckduckgo.com/?q=' + 
         encodeURIComponent(title);
