@@ -44,7 +44,9 @@ export default class ListItem extends Component {
     } else {
       return (
         <span className={className}>
-          {this.state.tooltip ? ' ' + text + ' ' : ''}
+          <span className="d-none d-md-inline">
+            {this.state.tooltip ? ` ${text} ` : ''}
+          </span>
           <i className={iconClass}></i>
         </span>
       )

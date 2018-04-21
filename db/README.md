@@ -31,11 +31,12 @@ consuming the content might not be care-free.
 Whether it normalizes transphobia. This includes media containing transphobic 
 jokes and productions that cast cis men to play trans women.
 
-This does not include portraying trans women as sex workers. While trans
-women characters are disproportionately sex workers in works of fiction,
-sex work is as a legitimate field of work as any. Therefore, including it here
-would be stigmatizing of trans people who do sex work, and so, it is not
-cause to consider whether a title normalizes transphobia.
+This does not include portraying trans women as sex workers. While cis 
+writers disproportionately write trans women as sex workers in their 
+screenplays, sex work itself is a legitimate profession. Using it as a metric
+would suggest there's something wrong with sex work, stigmatizing people in the
+process. Therefore it is not cause to consider whether a title normalizes 
+transphobia.
 
 ```
 0: Does not contribute to the marginalization of trans people
@@ -61,9 +62,9 @@ instead of up.
 
 ### `transPlayedByCis`: Is a trans character exclusively played by a cis actor?
 
-Whether a trans role is played, in its entirety, by a cis actor. If there
-are no trans characters or this is a documentary / reality show with no 
-fictional roles, then use `-` for not applicable.
+Whether a trans role is played, in its entirety, by a cis actor. In cases
+where there are no roles to be played by actors to begin with, such as a
+documentary or reality show, use `-` for not applicable.
 
 ```
 0: No trans characters are played, in their entirety, by a cis actor
@@ -79,8 +80,8 @@ Whether a trans character dies, for any reason other than old age. See the
 trope.
 
 ```
-0: No trans characters die
-1: A trans character dies
+0: No trans characters die of causes other than old age
+1: A trans character dies of causes other than old age
 -: Not applicable
 ?: Unknown
 ```

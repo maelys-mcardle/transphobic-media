@@ -14,6 +14,7 @@ export default class App extends Component {
       searchTerm: ''
     }
     this.searchDbEntries = this.searchDbEntries.bind(this);
+    this.resetState = this.resetState.bind(this);
   }
 
   searchDbEntries(searchTerm) {
@@ -35,10 +36,20 @@ export default class App extends Component {
     })
   }
 
+  resetState() {
+    this.setState({
+      searchTerm: '',
+      entriesToShow: allTransphobiaDbEntries
+    })
+  }
+
   render() {
     return (
       <div className="container">
-        <NavBar searchFunction={this.searchDbEntries} />
+        <NavBar 
+          searchFunction={this.searchDbEntries}
+          homepageFunction={this.resetState}
+          searchTerm={this.state.searchTerm} />
         <Title 
           searchTerm={this.state.searchTerm}
           entryCount={Object.keys(this.state.entriesToShow).length} />

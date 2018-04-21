@@ -5,6 +5,10 @@
   margin-right: 10px;
 }
 
+.navbar-brand {
+  cursor: pointer;
+}
+
 .navbar-title {
   font-family: 'Pacifico', cursive;
 }
