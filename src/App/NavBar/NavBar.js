@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import './NavBar.css';
 
 export default class NavBar extends Component {
+  
+  constructor(props) {
+    this.criteriaUrl = 
+      "https://github.com/maelys-mcardle/transphobic-media/" +
+      "blob/master/db/README.md";
+  }
+
   render() {
     return (
       <nav className="navbar navbar-light bg-light navbar-top">
@@ -15,7 +22,7 @@ export default class NavBar extends Component {
         <form className="form-inline my-2 my-lg-0">
           <a className="btn btn-outline-secondary criteria-button d-none d-md-inline"
             rel="noopener noreferrer" 
-            href="https://github.com/maelys-mcardle/transphobic-media/tree/master/db"
+            href={this.criteriaUrl}
             target="_blank">
             Explanation of Criteria
           </a>
