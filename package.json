@@ -11,9 +11,9 @@
     "node-fetch": "^2.1.2"
   },
   "scripts": {
-    "start": "node db/generatejson.js && react-scripts start",
+    "start": "npm run build-db && react-scripts start",
     "build-db": "node db/generatejson.js",
-    "build": "react-scripts build",
+    "build": "npm run build-db && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
