@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import './NavBar.css';
 
 export default class NavBar extends Component {
-  
+
   constructor(props) {
+    super(props);
     this.criteriaUrl = 
       "https://github.com/maelys-mcardle/transphobic-media/" +
       "blob/master/db/README.md";
