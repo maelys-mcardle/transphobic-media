@@ -37,21 +37,6 @@ export default class Details extends Component {
     )
   }
 
-  renderTransphobiaText(transphobia) {
-    switch (transphobia) {
-      case undefined: 
-        return 'Unsure if this depicts transphobia or is itself transphobic';
-      case null: 
-        return 'Not applicable whether this depicts transphobia or is itself transphobic';
-      case false: 
-        return 'Does not contain any transphobia'
-      case true: 
-        return 'Depicts transphobia or is itself transphobic'
-      default: 
-        return 'Unsure if this depicts transphobia or is itself transphobic';
-    }
-  }
-
   renderNormalizesText(normalizesTransphobia) {
     switch (normalizesTransphobia) {
       case undefined: 
@@ -67,48 +52,63 @@ export default class Details extends Component {
     }
   }
 
+  renderShowsTransphobiaText(showsTransphobia) {
+    switch (showsTransphobia) {
+      case undefined: 
+        return 'Unsure if this shows transphobia on screen';
+      case null: 
+        return 'Not applicable whether this shows transphobia on screen';
+      case false: 
+        return 'Does not contain any transphobia'
+      case true: 
+        return 'Shows transphobia on screen'
+      default: 
+        return 'Unsure if this shows transphobia on screen';
+    }
+  }
+
   renderTransJokesText(transJokes) {
     switch (transJokes) {
       case undefined: 
-        return 'Unsure if this has jokes that disparage trans people';
+        return 'Unsure if this has jokes that disparage trans/non-binary people';
       case null: 
-        return 'Not applicable whether this contains jokes that disparage trans people';
+        return 'Not applicable whether this contains jokes that disparage trans/non-binary people';
       case false: 
-        return 'No jokes that disparage trans people';
+        return 'No jokes that disparage trans/non-binary people';
       case true: 
-        return 'Contains jokes that disparage trans people';
+        return 'Contains jokes that disparage trans/non-binary people';
       default: 
-        return 'Unsure if this has jokes that disparage trans people';
+        return 'Unsure if this has jokes that disparage trans/non-binary people';
     }
   }
 
   renderTransPlayedText(transPlayedByCis) {
     switch (transPlayedByCis) {
       case undefined:
-        return 'Unsure if a trans character is portrayed exclusively by a cis actor';
+        return 'Unsure if a trans/non-binary character is portrayed exclusively by a cis actor';
       case null: 
-        return 'Contains no trans characters (eg. stand-up comedy, documentary)';
+        return 'Contains no trans/non-binary characters (eg. stand-up comedy, documentary)';
       case false: 
-        return 'Trans characters are portrayed by trans actors';
+        return 'Trans/non-binary characters are portrayed by trans actors';
       case true: 
-        return 'A trans character is exclusively portrayed by a cis actor';
+        return 'A trans/non-binary character is exclusively portrayed by a cis actor';
       default: 
-        return 'Unsure if a trans character is portrayed by a cis actor';
+        return 'Unsure if a trans/non-binary character is portrayed by a cis actor';
     }
   }
 
   renderDeadTransText(deadTrans) {
     switch (deadTrans) {
       case undefined:
-        return 'Unsure if a trans person dies of causes other than old age';
+        return 'Unsure if a trans/non-binary person dies of causes other than old age';
       case null: 
-        return 'No trans characters pass away (no trans people featured)';
+        return 'No trans/non-binary characters pass away (no trans people featured)';
       case false: 
-        return 'No trans characters pass away';
+        return 'No trans/non-binary characters pass away';
       case true: 
-        return 'A trans character dies of causes other than old age';
+        return 'A trans/non-binary character dies of causes other than old age';
       default: 
-        return 'Unsure if a trans person dies of causes other than old age';
+        return 'Unsure if a trans/non-binary person dies of causes other than old age';
     }
   }
 
@@ -117,12 +117,11 @@ export default class Details extends Component {
   }
 
   webSearchUrl(title, transphobia) {
+    let urlBase = 'https://google.com/search?q=';
     if (transphobia) {
-      return 'https://duckduckgo.com/?q=' + 
-        encodeURIComponent(`"${title}" transphobia`);
+      return urlBase + encodeURIComponent(`"${title}" transphobia`);
     } else {
-      return 'https://duckduckgo.com/?q=' + 
-        encodeURIComponent(title);
+      return urlBase + encodeURIComponent(title);
     }
   }
 
@@ -134,12 +133,12 @@ export default class Details extends Component {
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
-            {this.renderBadge(this.props.data.transphobia)}
-            {this.renderTransphobiaText(this.props.data.transphobia)}
-          </li>
-          <li className="list-group-item">
             {this.renderBadge(this.props.data.normalizesTransphobia)}
             {this.renderNormalizesText(this.props.data.normalizesTransphobia)}
+          </li>
+          <li className="list-group-item">
+            {this.renderBadge(this.props.data.showsTransphobia)}
+            {this.renderShowsTransphobiaText(this.props.data.showsTransphobia)}
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.transJokes)}
@@ -163,7 +162,7 @@ export default class Details extends Component {
           &nbsp;
           <a className="btn btn-primary" 
             href={this.webSearchUrl(this.props.data.title, 
-              this.props.data.transphobia)}
+              this.props.data.normalizesTransphobia)}
             target="_blank">
             Search Web
           </a>

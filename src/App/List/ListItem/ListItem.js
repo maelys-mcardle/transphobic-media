@@ -19,24 +19,30 @@ export default class ListItem extends Component {
   getBadge() {
     let iconClass = 'fas fa-question-circle';
     let className = 'badge badge-padding ';
-    let text = 'Unsure'
+    let text = ''
 
-    if (this.props.data.transphobia === undefined) {
-      iconClass = 'fas fa-question-circle';
-      className += 'badge-secondary';
-      text = 'Unsure';
-    } else if (this.props.data.transphobia === null) {
+    if (this.props.data.normalizesTransphobia === null) {
       iconClass = 'fas fa-circle';
       className += 'badge-secondary';
       text = 'Not Applicable';
-    } else if (this.props.data.transphobia === true) {
+    } else if (this.props.data.normalizesTransphobia === true) {
       iconClass = 'fas fa-exclamation-circle';
       className += 'badge-danger';
-      text = 'Warning';
-    } else if (this.props.data.transphobia === false) {
+      text = 'Transphobic';
+    } else if (this.props.data.normalizesTransphobia === false &&
+               this.props.data.showsTransphobia === true) {
+      iconClass = 'fas fa-exclamation-circle';
+      className += 'badge-info';
+      text = 'Shows Transphobia';
+    } else if (this.props.data.normalizesTransphobia === false &&
+               this.props.data.showsTransphobia === false) {
       iconClass = 'fas fa-smile';
       className += 'badge-primary';
       text = 'No Transphobia';
+    } else {
+      iconClass = 'fas fa-question-circle';
+      className += 'badge-secondary';
+      text = 'Unsure';
     }
 
     if (this.state.details) {

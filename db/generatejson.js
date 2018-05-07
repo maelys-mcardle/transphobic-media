@@ -48,16 +48,16 @@ function parseTransphobiaDb(dbPath)
   while (linePosition > 0) {
     [line, linePosition] = getNextLine(rawTransphobiaDb, linePosition + 1);
     let [imdb,
-      transphobia,
       normalizesTransphobia,
+      showsTransphobia,
       transJokes,
       transPlayedByCis,
       deadTrans,
       title] = line.split('\t');
 
     transphobiaDb[imdb] = {
-      transphobia: tsvValueToJson(transphobia),
       normalizesTransphobia: tsvValueToJson(normalizesTransphobia),
+      showsTransphobia: tsvValueToJson(showsTransphobia),
       transJokes: tsvValueToJson(transJokes),
       transPlayedByCis: tsvValueToJson(transPlayedByCis),
       deadTrans: tsvValueToJson(deadTrans),
