@@ -48,7 +48,7 @@ function parseTransphobiaDb(dbPath)
   while (linePosition > 0) {
     [line, linePosition] = getNextLine(rawTransphobiaDb, linePosition + 1);
     let [imdb,
-      normalizesTransphobia,
+      transphobic,
       showsTransphobia,
       transJokes,
       transPlayedByCis,
@@ -56,13 +56,14 @@ function parseTransphobiaDb(dbPath)
       title] = line.split('\t');
 
     transphobiaDb[imdb] = {
-      normalizesTransphobia: tsvValueToJson(normalizesTransphobia),
+      transphobic: tsvValueToJson(transphobic),
       showsTransphobia: tsvValueToJson(showsTransphobia),
       transJokes: tsvValueToJson(transJokes),
       transPlayedByCis: tsvValueToJson(transPlayedByCis),
       deadTrans: tsvValueToJson(deadTrans),
       title: title,
-      year: undefined
+      year: undefined,
+      endYear: undefined
     };
   }
 
@@ -80,6 +81,8 @@ function tsvValueToJson(value)
       return null;
     case '?':
       return undefined;
+    case '\N':
+      return null;
     default:
       return undefined;
   }
@@ -106,6 +109,7 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
     if (parsedTransphobiaDb.hasOwnProperty(tconst)) {
       parsedTransphobiaDb[tconst].title = primaryTitle;
       parsedTransphobiaDb[tconst].year = parseInt(startYear);
+      parsedTransphobiaDb[tconst].endYear = parseInt(endYear);
     }
   }
 

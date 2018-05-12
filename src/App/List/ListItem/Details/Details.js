@@ -37,23 +37,23 @@ export default class Details extends Component {
     )
   }
 
-  renderNormalizesText(normalizesTransphobia) {
+  renderTransphobicText(transphobic) {
     let explanation = `
       (eg. perpetuates tropes, denigrates dating trans/non-binary 
-      individuals, uses slurs or misgenders uncritically, denies
-      trans/non-binary people jobs by casting cis actors, etc.)`;
+      individuals, uses slurs or misgenders uncritically, casts
+      cis actors to play trans/non-binary roles, etc.)`;
 
-    switch (normalizesTransphobia) {
+    switch (transphobic) {
       case undefined: 
-        return 'Unsure if this normalizes transphobia' + explanation;
+        return 'Unsure if this work is transphobic' + explanation;
       case null: 
-        return 'Not applicable if this normalizes transphobia' + explanation;
+        return 'Not applicable if this work is transphobic' + explanation;
       case false: 
-        return 'Does not normalize transphobia' + explanation;
+        return 'This work is not transphobic' + explanation;
       case true: 
-        return 'Normalizes transphobia' + explanation;
+        return 'This work is transphobic' + explanation;
       default: 
-        return 'Unsure if this normalizes transphobia' + explanation;
+        return 'Unsure if this work is transphobic' + explanation;
     }
   }
 
@@ -62,11 +62,11 @@ export default class Details extends Component {
       case undefined: 
         return 'Unsure if this contains any transphobia';
       case null: 
-        return 'Not applicable whether this shows transphobic acts';
+        return 'Not applicable whether this contains transphobia';
       case false: 
         return 'Does not contain any transphobia'
       case true: 
-        return 'Shows transphobic acts'
+        return 'Contains depictions of transphobia'
       default: 
         return 'Unsure if this contains any transphobia';
     }
@@ -130,16 +130,26 @@ export default class Details extends Component {
     }
   }
 
+  renderTitle(title, startYear, endYear) {
+    if (endYear) {
+      return(<span>"{title}" ran from {startYear} - {endYear}</span>);
+    } else {
+      return(<span>"{title}" was released in {startYear}</span>);
+    }
+  }
+
   render() {
     return (
       <div className="card card-details">
         <div class="card-header text-muted">
-          {this.props.data.title} was released in {this.props.data.year}
+          {this.renderTitle(this.props.data.title, 
+            this.props.data.year,
+            this.props.data.endYear)}
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
-            {this.renderBadge(this.props.data.normalizesTransphobia)}
-            {this.renderNormalizesText(this.props.data.normalizesTransphobia)}
+            {this.renderBadge(this.props.data.transphobic)}
+            {this.renderTransphobicText(this.props.data.transphobic)}
           </li>
           <li className="list-group-item">
             {this.renderBadge(this.props.data.showsTransphobia)}

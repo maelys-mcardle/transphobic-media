@@ -11,7 +11,7 @@ with the raw data stored in `transphobic.tsv`.
 The IMDB identifier for the movie or show. If the url for the production is
 `www.imdb.com/title/tt0109445/`, then the identifier would be `tt0109445`.
 
-### `normalizesTransphobia`: Does it normalize transphobia?
+### `transphobic`: Does the work normalize transphobia?
 
 Whether the work itself is transphobic. That is to say, whether the work
 contributes to the marginalization of trans/non-binary people, perpetuates 

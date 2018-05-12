@@ -21,20 +21,20 @@ export default class ListItem extends Component {
     let className = 'badge badge-padding ';
     let text = ''
 
-    if (this.props.data.normalizesTransphobia === null) {
+    if (this.props.data.transphobic === null) {
       iconClass = 'fas fa-circle';
       className += 'badge-secondary';
       text = 'Not Applicable';
-    } else if (this.props.data.normalizesTransphobia === true) {
+    } else if (this.props.data.transphobic === true) {
       iconClass = 'fas fa-exclamation-circle';
       className += 'badge-danger';
       text = 'Warning';
-    } else if (this.props.data.normalizesTransphobia === false &&
+    } else if (this.props.data.transphobic === false &&
                this.props.data.showsTransphobia === true) {
       iconClass = 'fas fa-exclamation-circle';
       className += 'badge-info';
       text = 'Warning';
-    } else if (this.props.data.normalizesTransphobia === false &&
+    } else if (this.props.data.transphobic === false &&
                this.props.data.showsTransphobia === false) {
       iconClass = 'fas fa-smile';
       className += 'badge-primary';
