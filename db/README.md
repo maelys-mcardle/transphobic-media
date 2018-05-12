@@ -13,15 +13,20 @@ The IMDB identifier for the movie or show. If the url for the production is
 
 ### `normalizesTransphobia`: Does it normalize transphobia?
 
-Whether it normalizes transphobia. This includes media containing transphobic 
-jokes and productions that cast cis men to play trans women.
+Whether the work itself is transphobic. That is to say, whether the work
+contributes to the marginalization of trans/non-binary people, perpetuates 
+tropes/myths/caricatures about trans non-binary people, denigrates cis people 
+for dating trans/non-binary people, denies trans/non-binary people jobs by 
+giving them to cis actors, uses slurs (eg. shemale, tranny) uncritically, 
+misgenders trans/non-binary individuals uncritically, etc.
 
 This does not include portraying trans women as sex workers. While cis 
 writers disproportionately write trans women as sex workers in their 
-screenplays, sex work itself is a legitimate profession. Using it as a metric
-would suggest there's something wrong with sex work, stigmatizing people in the
-process. Therefore it is not cause to consider whether a title normalizes 
-transphobia.
+screenplays, sex work itself is a legitimate profession. Given that the
+current social climate is actively hostile to the well-being of sex workers,
+using it as a metric would suggest that there's something with sex work and
+further stigmatize sex workers in the process. Therefore it should not be
+used to decide whether a work is transphobic.
 
 ```
 0: Does not contribute to the marginalization of trans/non-binary people
@@ -32,11 +37,13 @@ transphobia.
 
 **Note**: If `transPlayedByCis` or `transJokes` are `1`, so is this.
 
-### `showsTransphobia`: Is any transphobia shown on screen?
+### `showsTransphobia`: Are any transphobic acts shown on screen?
 
-Whether the media contains depictions of transphobia on screen. This includes 
-transphobic physical aggression, transphobic jokes, or any other form of 
-violence against trans/non-binary or otherwise gender variant individuals.
+Whether the media depicts any transphobic acts including in works that
+are supportive of trans/non-binary individuals. Transphobic acts is defined
+as physical aggression, verbal abuse including transphobic jokes, or any other 
+form of violence against trans/non-binary individuals that might create an
+unpleasant experience for a trans/non-binary person watching.
 
 ```
 0: No transphobia shown on screen
@@ -62,7 +69,7 @@ punch down, instead of up.
 
 ### `transPlayedByCis`: Is a trans/non-binary character exclusively played by a cis actor?
 
-Whether a trans/non-binary role is played, in its entirety, by a cis actor. 
+Whether a trans/non-binary character is played, in its entirety, by a cis actor. 
 In cases where there are no roles to be played by actors to begin with, such 
 as a documentary or reality show, use `-` for not applicable.
 

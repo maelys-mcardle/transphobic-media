@@ -28,12 +28,12 @@ export default class ListItem extends Component {
     } else if (this.props.data.normalizesTransphobia === true) {
       iconClass = 'fas fa-exclamation-circle';
       className += 'badge-danger';
-      text = 'Transphobic';
+      text = 'Warning';
     } else if (this.props.data.normalizesTransphobia === false &&
                this.props.data.showsTransphobia === true) {
       iconClass = 'fas fa-exclamation-circle';
       className += 'badge-info';
-      text = 'Shows Transphobia';
+      text = 'Warning';
     } else if (this.props.data.normalizesTransphobia === false &&
                this.props.data.showsTransphobia === false) {
       iconClass = 'fas fa-smile';

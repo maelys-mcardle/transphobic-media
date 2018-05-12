@@ -38,32 +38,37 @@ export default class Details extends Component {
   }
 
   renderNormalizesText(normalizesTransphobia) {
+    let explanation = `
+      (eg. perpetuates tropes, denigrates dating trans/non-binary 
+      individuals, uses slurs or misgenders uncritically, denies
+      trans/non-binary people jobs by casting cis actors, etc.)`;
+
     switch (normalizesTransphobia) {
       case undefined: 
-        return 'Unsure if this normalizes transphobia';
+        return 'Unsure if this normalizes transphobia' + explanation;
       case null: 
-        return 'Not applicable if this normalizes transphobia';
+        return 'Not applicable if this normalizes transphobia' + explanation;
       case false: 
-        return 'Does not normalize transphobia';
+        return 'Does not normalize transphobia' + explanation;
       case true: 
-        return 'Normalizes transphobia';
+        return 'Normalizes transphobia' + explanation;
       default: 
-        return 'Unsure if this normalizes transphobia';
+        return 'Unsure if this normalizes transphobia' + explanation;
     }
   }
 
   renderShowsTransphobiaText(showsTransphobia) {
     switch (showsTransphobia) {
       case undefined: 
-        return 'Unsure if this shows transphobia on screen';
+        return 'Unsure if this contains any transphobia';
       case null: 
-        return 'Not applicable whether this shows transphobia on screen';
+        return 'Not applicable whether this shows transphobic acts';
       case false: 
         return 'Does not contain any transphobia'
       case true: 
-        return 'Shows transphobia on screen'
+        return 'Shows transphobic acts'
       default: 
-        return 'Unsure if this shows transphobia on screen';
+        return 'Unsure if this contains any transphobia';
     }
   }
 
@@ -127,7 +132,7 @@ export default class Details extends Component {
 
   render() {
     return (
-      <div className="card">
+      <div className="card card-details">
         <div class="card-header text-muted">
           {this.props.data.title} was released in {this.props.data.year}
         </div>
