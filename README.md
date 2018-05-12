@@ -23,5 +23,5 @@ npm i
 To run the server, run the following:
 
 ```
-yarn start
+npm run start
 ```
