@@ -28,6 +28,7 @@ export default class List extends Component {
         <ListItem 
           key={imdb} 
           title={this.props.entries[imdb].title}
+          type={this.props.entries[imdb].type}
           imdb={imdb}
           data={this.props.entries[imdb]} />
       )

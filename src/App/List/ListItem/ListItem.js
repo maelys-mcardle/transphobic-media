@@ -91,17 +91,30 @@ export default class ListItem extends Component {
     return '#' + this.props.imdb
   }
 
+  renderType() {
+    let icon = this.props.type.startsWith('tv') ?
+      "fas fa-tv":
+      "fas fa-film";
+
+    return (
+      <div className="type-icon">
+        <i className={icon}></i>
+      </div>
+      );
+  }
+
   renderTitle() {
     // Hide title on mobile devices when the details are shown.
-    if (this.state.details) {
-      return (
-        <span className="d-none d-md-block">
-          {this.props.title}
-        </span>
-      )
-    } else {
-      return this.props.title;
-    }
+
+    let className = (this.state.details) ? 
+      "d-none d-md-block": 
+      "";
+
+    return (
+      <span className={className}>
+        {this.renderType()} {this.props.title}
+      </span>
+    );
   }
 
   render() {

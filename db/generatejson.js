@@ -62,6 +62,7 @@ function parseTransphobiaDb(dbPath)
       transPlayedByCis: tsvValueToJson(transPlayedByCis),
       deadTrans: tsvValueToJson(deadTrans),
       title: title,
+      type: undefined,
       year: undefined,
       endYear: undefined
     };
@@ -108,6 +109,7 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
 
     if (parsedTransphobiaDb.hasOwnProperty(tconst)) {
       parsedTransphobiaDb[tconst].title = primaryTitle;
+      parsedTransphobiaDb[tconst].type = titleType;
       parsedTransphobiaDb[tconst].year = parseInt(startYear);
       parsedTransphobiaDb[tconst].endYear = parseInt(endYear);
     }
