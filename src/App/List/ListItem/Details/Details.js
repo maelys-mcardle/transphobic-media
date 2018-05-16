@@ -60,15 +60,15 @@ export default class Details extends Component {
   renderShowsTransphobiaText(showsTransphobia) {
     switch (showsTransphobia) {
       case undefined: 
-        return 'Unsure if this contains any transphobia';
+        return 'Unsure if any transphobic acts are shown';
       case null: 
         return 'Not applicable whether this contains transphobia';
       case false: 
         return 'Does not contain any transphobia'
       case true: 
-        return 'Contains depictions of transphobia'
+        return 'Transphobic acts are shown'
       default: 
-        return 'Unsure if this contains any transphobia';
+        return 'Unsure if any transphobic acts are shown';
     }
   }
 

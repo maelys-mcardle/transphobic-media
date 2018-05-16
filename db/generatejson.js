@@ -98,7 +98,7 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
   while (linePosition > 0) {
     [line, linePosition] = getNextLine(rawImdbDb, linePosition + 1);
     let [tconst,
-      titleType,
+      contentType,
       primaryTitle,
       originalTitle,
       isAdult,
@@ -109,13 +109,18 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
 
     if (parsedTransphobiaDb.hasOwnProperty(tconst)) {
       parsedTransphobiaDb[tconst].title = primaryTitle;
-      parsedTransphobiaDb[tconst].type = titleType;
+      parsedTransphobiaDb[tconst].type = parseContentType(contentType);
       parsedTransphobiaDb[tconst].year = parseInt(startYear);
       parsedTransphobiaDb[tconst].endYear = parseInt(endYear);
     }
   }
 
   return parsedTransphobiaDb;
+}
+
+function parseContentType(type)
+{
+  return type.replace(/([A-Z])/g, " $1").toLowerCase();
 }
 
 function getNextLine(fileContents, startPosition)
