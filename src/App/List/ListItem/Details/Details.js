@@ -166,7 +166,7 @@ export default class Details extends Component {
           &nbsp;
           <a className="btn btn-primary" 
             href={this.webSearchUrl(this.props.data.title, 
-              this.props.data.normalizesTransphobia)}
+              this.props.data.transphobic)}
             target="_blank">
             Search Web
           </a>

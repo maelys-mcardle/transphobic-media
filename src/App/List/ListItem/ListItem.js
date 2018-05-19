@@ -14,7 +14,7 @@ export default class ListItem extends Component {
     this.toggleDetails = this.toggleDetails.bind(this);
   }
 
-  renderBadge() {
+  renderIcon() {
     if (this.state.details) {
       return '';
     } else {
@@ -66,7 +66,7 @@ export default class ListItem extends Component {
         className="list-group-item cursor-pointer list-group-item-action d-flex justify-content-between align-items-center"
         onClick={this.toggleDetails}>
         {this.renderTitle()}
-        {this.renderBadge()}
+        {this.renderIcon()}
         {this.renderDetails()}
       </a>
     )
