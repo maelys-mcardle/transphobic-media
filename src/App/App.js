@@ -25,9 +25,10 @@ export default class App extends Component {
         allTransphobiaDbEntries).filter(
           imdb => allTransphobiaDbEntries[imdb].title.toLowerCase().includes(
             searchTerm.toLowerCase()));
-
-      searchResults = imdbKeysForSearchResults.map( 
-        imdb => allTransphobiaDbEntries[imdb]);
+      
+      searchResults = Object.assign({}, 
+        ...imdbKeysForSearchResults.map(
+          imdb => ({[imdb]: allTransphobiaDbEntries[imdb]})));
     }
 
     this.setState({
