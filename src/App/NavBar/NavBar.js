@@ -25,7 +25,7 @@ export default class NavBar extends Component {
             rel="noopener noreferrer" 
             href={this.criteriaUrl}
             target="_blank">
-            Explanation of Criteria
+            Criteria Explained
           </a>
           <input className="form-control mr-sm-2" 
             type="search" 

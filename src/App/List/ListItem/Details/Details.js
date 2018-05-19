@@ -5,7 +5,6 @@ export default class Details extends Component {
 
   renderBadge(value) {
     switch (value) {
-      case undefined: return this.badgeUnsure();
       case null: return this.badgeNotApplicable();
       case false: return this.badgeOkay();
       case true: return this.badgeNotOkay();
@@ -44,8 +43,6 @@ export default class Details extends Component {
       cis actors to play trans/non-binary roles, etc.)`;
 
     switch (transphobic) {
-      case undefined: 
-        return 'Unsure if this work is transphobic' + explanation;
       case null: 
         return 'Not applicable if this work is transphobic' + explanation;
       case false: 
@@ -59,23 +56,19 @@ export default class Details extends Component {
 
   renderShowsTransphobiaText(showsTransphobia) {
     switch (showsTransphobia) {
-      case undefined: 
-        return 'Unsure if any transphobic acts are shown';
       case null: 
         return 'Not applicable whether this contains transphobia';
       case false: 
         return 'Does not contain any transphobia'
-      case true: 
-        return 'Transphobic acts are shown'
+      case true:
+        return 'Shows transphobic acts/speech'
       default: 
-        return 'Unsure if any transphobic acts are shown';
+        return 'Unsure if any transphobic acts/speech are shown';
     }
   }
 
   renderTransJokesText(transJokes) {
     switch (transJokes) {
-      case undefined: 
-        return 'Unsure if this has jokes that disparage trans/non-binary people';
       case null: 
         return 'Not applicable whether this contains jokes that disparage trans/non-binary people';
       case false: 
@@ -89,8 +82,6 @@ export default class Details extends Component {
 
   renderTransPlayedText(transPlayedByCis) {
     switch (transPlayedByCis) {
-      case undefined:
-        return 'Unsure if a trans/non-binary character is portrayed exclusively by a cis actor';
       case null: 
         return 'Contains no trans/non-binary characters (eg. stand-up comedy, documentary)';
       case false: 
@@ -104,8 +95,6 @@ export default class Details extends Component {
 
   renderDeadTransText(deadTrans) {
     switch (deadTrans) {
-      case undefined:
-        return 'Unsure if a trans/non-binary person dies of causes other than old age';
       case null: 
         return 'No trans/non-binary characters pass away (no trans people featured)';
       case false: 

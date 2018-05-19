@@ -13,28 +13,35 @@ export default class ListItem extends Component {
     this.toggleDetails = this.toggleDetails.bind(this);
   }
 
-  getBadge() {
+  renderBadge() {
     let iconClass = 'fas fa-question-circle';
     let className = 'badge badge-padding ';
 
-    if (this.props.data.transphobic === null) {
-      // not applicable
-      iconClass = 'fas fa-circle';
-      className += 'badge-secondary';
-    } else if (this.props.data.transphobic === true) {
+    if (this.props.data.transphobic === true) {
       // transphobic
       iconClass = 'fas fa-frown';
       className += 'badge-danger';
-    } else if (this.props.data.transphobic === false &&
-               this.props.data.showsTransphobia === true) {
-      // not transphobic but contains transphobia
-      iconClass = 'fas fa-exclamation-circle';
-      className += 'badge-info';
-    } else if (this.props.data.transphobic === false &&
-               this.props.data.showsTransphobia === false) {
-      // no transphobia
-      iconClass = 'fas fa-smile';
-      className += 'badge-primary';
+    } else if (this.props.data.transphobic === false) {
+      if (this.props.data.showsTransphobia === true) {
+        // not transphobic
+        // shows transphobia
+        iconClass = 'fas fa-exclamation-circle';
+        className += 'badge-info';
+      } else if (this.props.data.showsTransphobia === false ||
+                 this.props.data.showsTransphobia === null) {
+        // not transphobic
+        // shows no transphobia / not applicable
+        iconClass = 'fas fa-smile';
+        className += 'badge-primary';
+      } else {
+        // unsure
+        iconClass = 'fas fa-question-circle';
+        className += 'badge-secondary';
+      }
+    } else if (this.props.data.transphobic === null) {
+      // not applicable
+      iconClass = 'fas fa-circle';
+      className += 'badge-secondary';
     } else {
       // unsure
       iconClass = 'fas fa-question-circle';
@@ -92,7 +99,7 @@ export default class ListItem extends Component {
         className="list-group-item cursor-pointer list-group-item-action d-flex justify-content-between align-items-center"
         onClick={this.toggleDetails}>
         {this.renderTitle()}
-        {this.getBadge()}
+        {this.renderBadge()}
         {this.renderDetails()}
       </a>
     )
