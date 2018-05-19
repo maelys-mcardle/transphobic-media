@@ -108,7 +108,7 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
       genres] = line.split('\t');
 
     if (parsedTransphobiaDb.hasOwnProperty(tconst)) {
-      parsedTransphobiaDb[tconst].title = primaryTitle;
+      parsedTransphobiaDb[tconst].title = getTitle(primaryTitle, originalTitle);
       parsedTransphobiaDb[tconst].type = parseContentType(contentType);
       parsedTransphobiaDb[tconst].year = parseInt(startYear);
       parsedTransphobiaDb[tconst].endYear = parseInt(endYear);
@@ -116,6 +116,15 @@ function combineImdbTransphobiaData(rawImdbDb, parsedTransphobiaDb)
   }
 
   return parsedTransphobiaDb;
+}
+
+function getTitle(primaryTitle, originalTitle)
+{
+  if (originalTitle != primaryTitle) {
+    return `${primaryTitle} (${originalTitle})`;
+  } else {
+    return primaryTitle;
+  }
 }
 
 function parseContentType(type)
