@@ -29,8 +29,10 @@ export default class List extends Component {
           key={imdb} 
           title={this.props.entries[imdb].title}
           type={this.props.entries[imdb].type}
+          transphobic={this.props.entries[imdb].transphobic}
+          showsTransphobia={this.props.entries[imdb].showsTransphobia}
           imdb={imdb}
-          data={this.props.entries[imdb]} />
+          details={this.props.entries[imdb]} />
       )
     }
 
