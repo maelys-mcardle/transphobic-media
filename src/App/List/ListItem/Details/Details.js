@@ -110,12 +110,14 @@ export default class Details extends Component {
     return `https://www.imdb.com/title/${imdbCode}/`;
   }
 
-  webSearchUrl(title, transphobia) {
-    let urlBase = 'https://google.com/search?q=';
+  webSearchUrl(title, type, transphobia) {
+    let urlBase = 'https://google.com/search?q=' + 
+      encodeURIComponent(`"${title}" ${type}`);
+
     if (transphobia) {
-      return urlBase + encodeURIComponent(`"${title}" transphobia`);
+      return urlBase + encodeURIComponent(` transphobia`);
     } else {
-      return urlBase + encodeURIComponent(title);
+      return urlBase;
     }
   }
 
@@ -166,6 +168,7 @@ export default class Details extends Component {
           &nbsp;
           <a className="btn btn-primary" 
             href={this.webSearchUrl(this.props.data.title, 
+              this.props.data.type,
               this.props.data.transphobic)}
             target="_blank">
             Search Web
