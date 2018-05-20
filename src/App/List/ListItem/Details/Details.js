@@ -48,7 +48,7 @@ export default class Details extends Component {
       case false: 
         return 'This work is not transphobic' + explanation;
       case true: 
-        return 'This work is transphobic' + explanation;
+        return 'This work is itself transphobic' + explanation;
       default: 
         return 'Unsure if this work is transphobic' + explanation;
     }
