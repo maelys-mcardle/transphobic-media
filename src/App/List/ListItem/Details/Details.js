@@ -83,7 +83,7 @@ export default class Details extends Component {
   renderTransPlayedText(transPlayedByCis) {
     switch (transPlayedByCis) {
       case null: 
-        return 'Contains no trans/non-binary roles to play (eg. stand-up comedy, documentary)';
+        return 'Contains no trans/non-binary roles to portray (eg. stand-up comedy, documentary)';
       case false: 
         return 'Trans/non-binary characters are portrayed by trans actors';
       case true: 
