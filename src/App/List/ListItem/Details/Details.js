@@ -61,9 +61,9 @@ export default class Details extends Component {
       case false: 
         return 'Does not contain any transphobia'
       case true:
-        return 'Shows transphobic acts/speech'
+        return 'Shows transphobic acts and/or speech'
       default: 
-        return 'Unsure if any transphobic acts/speech are shown';
+        return 'Unsure if any transphobic acts and/or speech are shown';
     }
   }
 
@@ -83,7 +83,7 @@ export default class Details extends Component {
   renderTransPlayedText(transPlayedByCis) {
     switch (transPlayedByCis) {
       case null: 
-        return 'Contains no trans/non-binary characters (eg. stand-up comedy, documentary)';
+        return 'Contains no trans/non-binary roles to play (eg. stand-up comedy, documentary)';
       case false: 
         return 'Trans/non-binary characters are portrayed by trans actors';
       case true: 
