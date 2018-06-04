@@ -121,8 +121,9 @@ export default class Details extends Component {
     }
   }
 
-  renderTitle(title, startYear, endYear) {
-    if (endYear) {
+  renderTitle(title, type, startYear, endYear) {
+    if (endYear || type === 'tv series') {
+      endYear = (endYear) ? endYear : 'Present';
       return(<span>"{title}" ran from {startYear} - {endYear}</span>);
     } else {
       return(<span>"{title}" was released in {startYear}</span>);
@@ -134,6 +135,7 @@ export default class Details extends Component {
       <div className="card card-details">
         <div class="card-header text-muted">
           {this.renderTitle(this.props.data.title, 
+            this.props.data.type,
             this.props.data.year,
             this.props.data.endYear)}
         </div>
