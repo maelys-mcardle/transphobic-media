@@ -38,19 +38,19 @@ export default class Details extends Component {
 
   renderTransphobicText(transphobic) {
     let explanation = `
-      (eg. perpetuates tropes, denigrates dating trans/non-binary 
+      perpetuate tropes, denigrates dating trans/non-binary 
       individuals, uses slurs or misgenders uncritically, casts
       cis actors to play trans/non-binary roles, etc.)`;
 
     switch (transphobic) {
       case null: 
-        return 'Not applicable if this work is transphobic' + explanation;
+        return 'Not applicable if this work is transphobic';
       case false: 
-        return 'This work is not transphobic' + explanation;
+        return 'This work is not transphobic (eg. it does not ' + explanation;
       case true: 
-        return 'This work is itself transphobic' + explanation;
+        return 'This work is transphobic (eg. it does ' + explanation;
       default: 
-        return 'Unsure if this work is transphobic' + explanation;
+        return 'Unsure if this work is transphobic (eg. whether it does ' + explanation;
     }
   }
 
@@ -59,9 +59,9 @@ export default class Details extends Component {
       case null: 
         return 'Not applicable whether this contains transphobia';
       case false: 
-        return 'Does not contain any transphobia'
+        return 'No transphobic acts and/or speech are shown';
       case true:
-        return 'Shows transphobic acts and/or speech'
+        return 'Transphobic acts and/or speech are shown';
       default: 
         return 'Unsure if any transphobic acts and/or speech are shown';
     }
@@ -72,7 +72,7 @@ export default class Details extends Component {
       case null: 
         return 'Not applicable whether this contains jokes that disparage trans/non-binary people';
       case false: 
-        return 'No jokes that disparage trans/non-binary people';
+        return 'Does not contain jokes that disparage trans/non-binary people';
       case true: 
         return 'Contains jokes that disparage trans/non-binary people';
       default: 
@@ -98,7 +98,7 @@ export default class Details extends Component {
       case null: 
         return 'No trans/non-binary characters pass away (no trans people featured)';
       case false: 
-        return 'No trans/non-binary characters pass away';
+        return 'No trans/non-binary characters pass away of causes other than old age';
       case true: 
         return 'A trans/non-binary character dies of causes other than old age';
       default: 

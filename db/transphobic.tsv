@@ -17,6 +17,7 @@ tt6213952	1	1	0	1	?	Anything
 tt1486217	1	1	1	1	0	Archer
 tt0367279	1	1	1	-	0	Arrested Development
 tt0460622	1	1	0	1	0	Barbershop
+tt0072472	1	1	1	1	0	Barney Miller
 tt0401248	?	?	0	1	0	Beautiful Boxer
 tt1705969	?	?	0	-	0	Becoming Chaz
 tt4604692	?	?	0	-	0	Becoming Us
@@ -34,8 +35,10 @@ tt2578560	1	1	1	1	0	Broad City
 tt2467372	0	0	0	-	0	Brooklyn Nine-Nine
 tt0290498	0	?	0	0	0	By Hook or by Crook
 tt1444382	1	1	1	-	0	Cake Boss
+tt0098764	1	1	0	1	0	Carol & Company
 tt2498968	0	1	0	0	?	Carl[a]
 tt2498968	1	1	0	-	0	Catfish: The TV Show
+tt0073972	1	1	1	1	0	Charlie’s Angels
 tt0083745	1	1	0	-	0	Come Back to the Five and Dime, Jimmy Dean, Jimmy Dean
 tt2314952	1	1	1	-	0	Comedians in Cars Getting Coffee
 tt1439629	1	1	1	-	0	Community
@@ -66,6 +69,7 @@ tt0108778	1	1	1	1	0	Friends
 tt0149460	1	1	1	-	0	Futurama
 tt4689752	0	?	0	-	0	Frontline: Growing Up Trans
 tt0416347	1	1	0	-	0	Geraldo at Large
+tt0081869	1	1	1	1	0	Gimme a Break!
 tt8254556	1	?	0	1	0	Girl
 tt1723816	1	1	1	-	0	Girls
 tt1327801	1	?	?	1	0	Glee
@@ -99,6 +103,7 @@ tt0089424	1	1	0	1	1	Kiss of the Spider Woman
 tt0455538	1	1	1	1	0	How to Lose Friends & Alienate People
 tt1650048	1	1	0	1	0	Laurence Anyways
 tt0161160	1	1	0	1	0	L.A. Doctors
+tt0090466	1	1	1	1	0	L.A. Law
 tt0098844	1	1	0	1	?	Law & Order
 tt0203259	1	1	0	1	1	Law & Order: Special Victims Unit
 tt0185431	1	1	1	1	0	Little Nicky
@@ -113,6 +118,7 @@ tt0107614	1	1	0	-	0	Mrs. Doubtfire
 tt0066115	1	1	0	1	0	Myra Breckinridge
 tt0110622	1	1	1	1	0	Naked Gun 33 1/3
 tt4687724	?	?	0	-	0	New Girls on the Block
+tt0086770	1	1	1	1	0	Night Court
 tt0361217	1	1	0	1	0	Nip/Tuck
 tt0338290	1	1	0	1	0	Normal
 tt1670345	1	1	1	-	0	Now You See Me
@@ -123,6 +129,7 @@ tt2060540	1	1	1	-	0	Patton Oswalt: Finest Hour
 tt0100332	0	0	0	-	0	Paris Is Burning
 tt1266020	1	1	1	-	0	Parks and Recreation
 tt2628232	1	1	?	1	1	Penny Dreadful
+tt0071034	1	1	?	1	0	Police Woman
 tt0202748	?	1	0	1	0	Popular
 tt1780441	1	1	0	-	0	Portlandia
 tt1578873	1	1	1	1	0	Pretty Little Liars
@@ -155,6 +162,7 @@ tt0324013	1	1	0	1	0	Soldier's Girl
 tt1124373	1	?	0	1	0	Sons of Anarchy
 tt0121955	1	1	1	1	0	South Park
 tt0276515	0	1	0	-	0	Southern Comfort
+tt0083483	1	1	1	1	0	St. Elsewhere
 tt3061046	0	0	0	0	0	Steven Universe
 tt1741256	1	1	1	1	0	Suburgatory
 tt1031283	1	1	1	1	0	Superjail!
@@ -166,6 +174,7 @@ tt0106148	1	1	0	1	0	Tales of the City
 tt0405422	1	1	1	-	0	The 40 Year Old Virgin
 tt0109045	1	1	0	1	0	The Adventures of Priscilla, Queen of the Desert
 tt1292218	1	1	0	-	0	The Agenda with Steve Paikin
+tt0394099	1	0	0	-	0	The Alfred Hitchcock Hour: An Unlocked Window
 tt5034474	1	1	0	1	0	The Assignment
 tt0286493	1	1	1	1	1	The Badge
 tt0898266	1	1	1	-	0	The Big Bang Theory
@@ -193,7 +202,7 @@ tt6567314	1	1	1	-	0	The Joe Rogan Experience
 tt0330251	1	1	0	1	0	The L Word
 tt0075529	1	1	0	1	0	The Love Boat
 tt5233558	0	?	0	-	0	The Death and Life of Marsha P. Johnson
-tt0072519	1	1	0	1	0	The Jeffersons
+tt0072519	1	1	1	1	0	The Jeffersons
 tt6467482	1	1	0	1	0	The Mantis
 tt2338232	1	1	1	-	0	The Michael J. Fox Show
 tt2211129	0	?	0	0	0	The Mindy Project
@@ -216,6 +225,7 @@ tt0084917	1	1	0	1	0	The World According to Garp
 tt0106179	1	1	0	1	0	The X-Files
 tt0402707	1	1	0	-	0	There's Something About Miriam
 tt1587431	1	1	0	0	0	Ticked-Off Trannies with Knives
+tt0080299	1	1	1	1	0	Too Close For Comfort
 tt0117951	1	1	0	1	0	Trainspotting
 tt0407265	1	1	0	1	0	Transamerica
 tt1152813	?	?	0	-	0	Transamerican Love Story
@@ -231,9 +241,10 @@ tt0369179	1	1	1	1	0	Two and a Half Men
 tt0805669	?	?	0	1	0	Ugly Betty
 tt2577990	?	1	0	-	1	Valentine Road
 tt1261356	1	1	0	-	0	Wendy: The Wendy Williams Show
+tt0075599	1	1	0	1	0	Westside Medical
 tt0381707	1	1	0	-	0	White Chicks
 tt0157246	1	1	1	-	0	Will & Grace
 tt1826951	1	1	0	-	0	Work It
-tt0077097	1	1	0	1	?	WKRP in Cincinnati
+tt0077097	1	1	1	1	?	WKRP in Cincinnati
 tt0112230	?	?	0	1	0	Xena: Warrior Princess
 tt1608290	1	1	1	1	0	Zoolander 2
