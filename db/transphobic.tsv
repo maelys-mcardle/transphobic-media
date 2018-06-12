@@ -19,6 +19,7 @@ tt0367279	1	1	1	-	0	Arrested Development
 tt0460622	1	1	0	1	0	Barbershop
 tt0072472	1	1	1	1	0	Barney Miller
 tt0401248	?	?	0	1	0	Beautiful Boxer
+tt0174378	1	1	1	1	0	Becker
 tt1705969	?	?	0	-	0	Becoming Chaz
 tt4604692	?	?	0	-	0	Becoming Us
 tt0168987	1	1	0	1	0	Better Than Chocolate
@@ -39,6 +40,7 @@ tt0098764	1	1	0	1	0	Carol & Company
 tt2498968	0	1	0	0	?	Carl[a]
 tt2498968	1	1	0	-	0	Catfish: The TV Show
 tt0073972	1	1	1	1	0	Charlie’s Angels
+tt0108724	1	1	0	1	1	Chicago Hope
 tt0083745	1	1	0	-	0	Come Back to the Five and Dime, Jimmy Dean, Jimmy Dean
 tt2314952	1	1	1	-	0	Comedians in Cars Getting Coffee
 tt1439629	1	1	1	-	0	Community
@@ -48,6 +50,7 @@ tt0247082	1	1	0	1	1	CSI: Crime Scene Investigation
 tt2390237	1	1	1	-	0	Cuban Fury
 tt0790636	1	1	0	1	1	Dallas Buyer's Club
 tt7807952	1	1	1	-	0	Dave Chappelle: Equanimity
+tt0204993	?	1	0	0	0	Dark Angel
 tt5512432	0	0	0	0	0	Daytime Divas
 tt0288937	1	1	0	1	1	Degrassi: The Next Generation
 tt0075936	1	1	1	1	0	Desperate Living
@@ -65,6 +68,7 @@ tt0108757	1	1	0	1	1	E.R.
 tt0098790	1	?	?	1	0	Evening Shade
 tt3127020	0	?	0	0	0	Faking It
 tt0182576	1	1	1	1	0	Family Guy
+tt0200337	1	1	?	1	0	Family Law
 tt0155711	1	1	0	1	0	Flawless
 tt0185065	1	1	0	-	0	Fox and Friends
 tt0106004	1	1	1	-	0	Frasier
@@ -72,6 +76,7 @@ tt0108778	1	1	1	1	0	Friends
 tt0149460	1	1	1	-	0	Futurama
 tt4689752	0	?	0	-	0	Frontline: Growing Up Trans
 tt0416347	1	1	0	-	0	Geraldo at Large
+tt0247101	1	1	0	1	0	Gideon's Crossing
 tt0081869	1	1	1	1	0	Gimme a Break!
 tt8254556	1	?	0	1	0	Girl
 tt1723816	1	1	1	-	0	Girls
@@ -97,7 +102,9 @@ tt1176156	?	?	?	0	0	I Want to Work for Diddy
 tt0472954	1	1	1	-	0	It’s Always Sunny In Philadelphia
 tt0810913	1	1	0	-	0	Jack & Jill
 tt0120974	1	1	0	-	0	Jerry Springer
+tt0209069	1	1	0	1	0	Judging Amy
 tt0118364	1	1	1	1	0	Just Shoot Me!
+tt0364823	1	1	0	0	0	Karen Sisco
 tt2354136	1	1	0	-	0	Katie
 tt0384746	1	1	1	1	0	Kenny vs Spenny
 tt1981558	1	1	1	-	0	Key & Peele
@@ -126,6 +133,7 @@ tt0086770	1	1	1	1	0	Night Court
 tt0361217	1	1	0	1	0	Nip/Tuck
 tt0338290	1	1	0	1	0	Normal
 tt1670345	1	1	1	-	0	Now You See Me
+tt0106079	1	1	?	1	0	NYPD Blue
 tt0089730	1	1	0	1	0	Once Bitten
 tt2372162	0	?	0	0	0	Orange Is the New Black
 tt0107756	1	1	1	1	0	Orlando
@@ -187,7 +195,7 @@ tt0092325	1	?	0	1	0	The Bold and the Beautiful
 tt0144801	?	1	0	-	1	The Brandon Teena Story
 tt3639956	1	1	1	1	0	The Centre
 tt0065549	1	1	0	1	0	The Christine Jorgensen Story
-tt0111921	1	1	0	?	0	The City
+tt0111921	1	1	0	1	0	The City
 tt1195935	1	1	1	1	0	The Cleveland Show
 tt3203616	1	1	1	?	0	The Cobbler
 tt0458254	1	1	1	-	0	The Colbert Report
@@ -196,7 +204,7 @@ tt0108734	1	1	1	-	0	The Critic (1994)
 tt0104036	1	1	0	1	0	The Crying Game
 tt0115147	1	1	1	-	0	The Daily Show
 tt0810819	1	1	0	1	1	The Danish Girl
-tt0285356	1	1	0	0	0	The Education of Max Bickford
+tt0285356	1	1	0	1	0	The Education of Max Bickford
 tt2244495	1	1	1	-	0	The Eric André Show
 tt2262532	0	?	0	0	0	The Fosters
 tt0088526	1	1	0	1	0	The Golden Girls
